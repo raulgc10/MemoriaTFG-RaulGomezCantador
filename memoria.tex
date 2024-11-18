@@ -36,8 +36,8 @@
 % Dependiendo de las partes de la plantilla, a veces aparecerán tal
 % cual los escribas, a veces totalmente en mayúsculas, a veces de otras
 % formas
-\title{Título del Trabajo con Letras Mayúsculas para Sustantivos y Adjetivos}
-\author{Nombre del autor / autora}
+\title{ANÁLISIS DEL USO DE LENGUAJES DE PROGRAMACIÓN MINORITARIOS EN PROYECTOS DE SOFTWARE LIBRE}
+\author{Raúl Gómez Cantador}
 
 % Guarda el título, el autor y la fecha en variables
 \makeatletter
@@ -72,7 +72,7 @@ TITULACIÓN EN MAYÚSCULAS
 
 \vspace{1cm}
 \LARGE
-\textbf{TRABAJO FIN DE GRADO/MÁSTER}
+\textbf{TRABAJO FIN DE GRADO}
 
 \vspace{2cm}
 
@@ -83,12 +83,11 @@ TITULACIÓN EN MAYÚSCULAS
 
 \large
 Autor : \theauthor \\
-Tutor : Dr. Nombre del Profesor/a\\
-Cotutor: (si procede)
+Tutor : Dr. Gregorio Robles Martínez/a\\
 \vspace{1cm}
 
 \large
-Curso académico 202X/202X
+Curso académico 2024/2025
 
 \end{center}
 \end{titlepage}
@@ -117,12 +116,12 @@ Curso académico 202X/202X
 \vspace{0.8cm}
 \large
 \textbf{Autor :} \theauthor \\
-\textbf{Tutor :} Dr. Nombre del Profesor/a
+\textbf{Tutor :} Dr. Gregorio Robles Martínez/a
 
 \end{center}
 
 \vspace{0.8cm}
-La defensa del presente Proyecto Fin de Carrera se realizó el día \qquad$\;\,$ de \qquad\qquad\qquad\qquad \newline de 202X, siendo calificada por el siguiente tribunal:
+La defensa del presente Proyecto Fin de Carrera se realizó el día \qquad$\;\,$ de \qquad\qquad\qquad\qquad \newline de 2024, siendo calificada por el siguiente tribunal:
 
 
 \vspace{0.5cm}
@@ -240,121 +239,41 @@ As it is the translation of the ``Resumen'', which is supposed to be written at 
 \label{sec:intro} % etiqueta para poder referenciar luego en el texto con ~\ref{sec:intro}
 \pagenumbering{arabic} % para empezar la numeración de página con números
 
-En este capítulo se introduce el proyecto.
-Debería tener información general sobre el mismo, dando la información sobre el contexto en el que se ha desarrollado.
+% En este capítulo se introduce el proyecto.
+% Debería tener información general sobre el mismo, dando la información sobre el contexto en el que se ha desarrollado.
 
-No te olvides de echarle un ojo a la página con los cinco errores de escritura más frecuentes\footnote{\url{http://www.tallerdeescritores.com/errores-de-escritura-frecuentes}}.
+% No te olvides de echarle un ojo a la página con los cinco errores de escritura más frecuentes\footnote{\url{http://www.tallerdeescritores.com/errores-de-escritura-frecuentes}}.
 
-Aconsejo a todo el mundo que mire y se inspire en memorias pasadas.
-Las memorias de los proyectos que he llevado yo están (casi) todas almacenadas en mi web del GSyC\footnote{\url{https://gsyc.urjc.es/~grex/pfcs/}}.
+% Aconsejo a todo el mundo que mire y se inspire en memorias pasadas.
+% Las memorias de los proyectos que he llevado yo están (casi) todas almacenadas en mi web del GSyC\footnote{\url{https://gsyc.urjc.es/~grex/pfcs/}}.
 
-En mayo de 2023 me apunté a un curso de innovación docente donde nos pidieron hacer un podcast con temática docente. Aproveché entonces para hacer un podcast de unos 30 minutos donde en los primeros quince minutos introducía LaTeX y la memoria, y en los segundos hacía hincapién en aquellas cosas que más os cuestan utilizar en la memoria: las figuras, las tablas y las citas. Podéis escuchar el podcast en Internet\footnote{\url{https://podcasters.spotify.com/pod/show/gregorio-robles9/episodes/Tu-memoria-de-Trabajo-Fin-de-Grado-o-de-Mster-en-LaTeX-e23hucr/a-a58kp2}}.
+% En mayo de 2023 me apunté a un curso de innovación docente donde nos pidieron hacer un podcast con temática docente. Aproveché entonces para hacer un podcast de unos 30 minutos donde en los primeros quince minutos introducía LaTeX y la memoria, y en los segundos hacía hincapién en aquellas cosas que más os cuestan utilizar en la memoria: las figuras, las tablas y las citas. Podéis escuchar el podcast en Internet\footnote{\url{https://podcasters.spotify.com/pod/show/gregorio-robles9/episodes/Tu-memoria-de-Trabajo-Fin-de-Grado-o-de-Mster-en-LaTeX-e23hucr/a-a58kp2}}.
 
+Durante los últimos años, a través de plataformas de desarrollo de software como GitHub o GitLab, una gran cantidad de desarrolladores contribuyen diariamente a proyectos de software libre. Por supuesto, al haber tanta variedad de proyectos y desarrolladores, existe una gran diversidad de lenguajes de programación que se usan en los distintos repositorios de cada uno de los proyectos. Este trabajo de fin de grado tiene como objetivo realizar el análisis del uso de esos lenguajes de programación, dividiéndolos en dos clases: lenguajes mayoritarios y lenguajes minoritarios, si bien, nos centraremos en mayor medida en estos últimos. Estos lenguajes minoritarios, si bien no son los más usados por la gran mayoría de desarrolladores, pueden llegar a cumplir roles específicos y críticos para el funcionamiento de una aplicación o proyecto.
 
-\section{Sección}
-\label{sec:seccion}
+Para llevar a cabo este análisis, se ha desarrollado una aplicación en Python cuyo objetivo es la recopilación y representación de datos provenientes de los repositorios de distintos proyectos para comprobar como es el uso de estos lenguajes minoritarios. Con todos estos datos, se ha creado una base de datos SQL que contiene la información de uso de los distintos lenguajes por usuario y repositorio de todos los proyectos que se han analizado a lo largo de la ejecución del trabajo de fin de grado.
 
-Esto es una sección, que es una estructura menor que un capítulo. 
-
-Por cierto, a veces me comentáis que no os compila por las tildes.
-Eso es un problema de codificación.
-Al guardar el archivo, guardad la codificación de ``ISO-Latin-1'' a ``UTF-8'' (o viceversa) y funcionará.
-
-\subsection{Estilo}
-\label{subsec:estilo}
-
-Recomiendo leer los consejos prácticos sobre escribir documentos científicos en \LaTeX \ de Diomidis Spinellis\footnote{\url{https://github.com/dspinellis/latex-advice}}.
-
-Lee sobre el uso de las comas\footnote{\url{http://narrativabreve.com/2015/02/opiniones-de-un-corrector-de-estilo-11-recetas-para-escribir-correctamente-la-coma.html}}. 
-Las comas en español no se ponen al tuntún.
-Y nunca, nunca entre el sujeto y el predicado (p.ej. en ``Yo, hago el TFG'' sobre la coma).
-La coma no debe separar el sujeto del predicado en una oración, pues se cortaría la secuencia natural del discurso.
-No se considera apropiado el uso de la llamada coma respiratoria o \emph{coma criminal}.
-Solamente se suele escribir una coma para marcar el lugar que queda cuando omitimos el verbo de una oración, pero es un caso que se da de manera muy infrecuente al escribir un texto científico (p.ej. ``El Real Madrid, campeón de Europa'').
-
-A continuación, viene una figura, la Figura~\ref{figura:foro_hilos}. 
-Observarás que el texto dentro de la referencia es el identificador de la figura (que se corresponden con el ``label'' dentro de la misma). 
-También habrás tomado nota de cómo se ponen las ``comillas dobles'' para que se muestren correctamente. 
-Nota que hay unas comillas de inicio (``) y otras de cierre (''), y que son diferentes.
-Volviendo a las referencias, nota que al compilar, la primera vez se crea un diccionario con las referencias, y en la segunda compilación se ``rellenan'' estas referencias. 
-Por eso hay que compilar dos veces tu memoria.
-Si no, no se crearán las referencias.
-
-
-
- \begin{figure}
-    \centering
-    \includegraphics[bb=0 0 800 600, width=12cm, keepaspectratio]{img/foro1}
-    \caption{Página con enlaces a hilos}
-    \label{figura:foro_hilos}
- \end{figure}
-
-
-A continuación un bloque ``verbatim'', que se utiliza para mostrar texto tal cual.
-Se puede utilizar para ofrecer el contenido de correos electrónicos, código, entre otras cosas.
-
-
-{\footnotesize
-\begin{verbatim}
-    From gaurav at gold-solutions.co.uk  Fri Jan 14 14:51:11 2005
-    From: gaurav at gold-solutions.co.uk (gaurav_gold)
-    Date: Fri Jan 14 19:25:51 2005
-    Subject: [Mailman-Users] mailman issues
-    Message-ID: <003c01c4fa40$1d99b4c0$94592252@gaurav7klgnyif>
-
-    Dear Sir/Madam,
-    How can people reply to the mailing list?  How do i turn off
-    this feature? How can i also enable a feature where if someone
-    replies the newsletter the email gets deleted?
-    Thanks
-
-    From msapiro at value.net  Fri Jan 14 19:48:51 2005
-    From: msapiro at value.net (Mark Sapiro)
-    Date: Fri Jan 14 19:49:04 2005
-    Subject: [Mailman-Users] mailman issues
-    In-Reply-To: <003c01c4fa40$1d99b4c0$94592252@gaurav7klgnyif>
-    Message-ID: <PC173020050114104851057801b04d55@msapiro>
-
-    gaurav_gold wrote:
-    >How can people reply to the mailing list?  How do i turn off
-    this feature? How can i also enable a feature where if someone
-    replies the newsletter the email gets deleted?
-
-    See the FAQ
-    >Mailman FAQ: http://www.python.org/cgi-bin/faqw-mm.py
-    article 3.11
-\end{verbatim}
-}
-
-
+Además, este proyecto cuenta con una aplicación web para poder facilitar la recolección y representación de los datos de manera mucho más fácil y cómoda, y que en el futuro podría servir para seguir recopilando datos de repositorios distintos a los que se han usado para realizar este análisis.
 
 \section{Estructura de la memoria}
 \label{sec:estructura}
 
-
-\begin{figure}
-  \centering
-  \includegraphics[width=9cm, keepaspectratio]{img/arquitectura.png}
-  \caption{Estructura del parser básico}
-  \label{fig:arquitectura}
-\end{figure}
-
-
-
-
-En esta sección se debería introducir la estructura de la memoria. 
-
-Así:
+La memoria se estructura de la siguiente manera:
 
 
 \begin{itemize}
-  \item En el primer capítulo se hace una intro al proyecto.
+  \item \textbf{Capítulo 1: Introducción.} Se presenta la motivación y una breve descripción de lo que se afronta en este proyecto, además de informar de la estructura del mismo.
   
-  \item En el capítulo~\ref{chap:objetivos} (ojo, otra referencia automática) se muestran los objetivos del proyecto.
+  \item \textbf{Capítulo 2: Objetivos.} Se describen los objetivos a alcanzar durante toda la consecución del proyecto, incluyendo tanto planificación temporal como objetivos técnicos.
   
-  \item A continuación se presenta el estado del arte en el capítulo~\ref{chap:estado}.
+  \item \textbf{Capítulo 3: Estado del arte.} Explicación de las distintas tecnologías usadas a lo largo del proyecto. Incluye la información sobre la aplicación web, y como se realiza la recopilación y guardado de datos en la base de datos.
   
-  \item \ldots
+  \item \textbf{Capítulo 4: Diseño e implementación.} Se realiza una explicación sobre el diseño en conjunto de todo el proyecto, y el por qué de como se ha implementado.
+  
+  \item \textbf{Capítulo 5: Resultados.} Se realiza el análisis final de los resultados obtenidos.
+  
+  \item \textbf{Capítulo 6: Conclusiones.} Incluye la conclusión final del proyecto.
+
 \end{itemize}
 
 
@@ -373,25 +292,57 @@ Así:
 \section{Objetivo general} % título de sección (se muestra)
 \label{sec:objetivo-general} % identificador de sección (no se muestra, es para poder referenciarla)
 
-Aquí vendría el objetivo general en una frase:
-Mi trabajo fin de grado consiste en crear de una herramienta de análisis de los comentarios jocosos en repositorios de software libre alojados en la plataforma GitHub.
+% Aquí vendría el objetivo general en una frase:
+% Mi trabajo fin de grado consiste en crear de una herramienta de análisis de los comentarios jocosos en repositorios de software libre alojados en la plataforma GitHub.
 
-Recuerda que los objetivos siempre vienen en infinitivo.
+% Recuerda que los objetivos siempre vienen en infinitivo.
 
+Mi trabajo de fin de grado consiste en obtener datos de los repositorios de proyectos de software libre que se encuentren disponibles en la plataforma de desarrollo software GitHub y analizar en profundidad los desarrolladores implicados en los mismos como los lenguajes de programación utilizados para llevarlos a cabo, principalmente aquellos que son minoritarios, pero de uso común.
 
 \section{Objetivos específicos}
 \label{sec:objetivos-especificos}
 
-Los objetivos específicos se pueden entender como las tareas en las que se ha desglosado el objetivo general.
-Y, sí, también vienen en infinitivo.
+Se han seguido los siguientes objetivos específicos para llegar a cumplir el objetivo final. Cada objetivo específico cuenta con sus propios puntos:
 
-
+\begin{itemize}
+  \item \textbf{Obtención de datos de los repositorios de plataformas Git}
+    \begin {itemize} 
+      \item Búsqueda de una herramienta para obtener los datos usando Python
+      \item Investigación del módulo de python Perceval usado para la obtención de commits realizados en los respositorios
+      \item Investigación de llamadas a la API de GitHub para obtener información adicional
+      \item Guardado de datos en formato JSON para su posterior tratamiento
+    \end{itemize}
+  \item \textbf{Tratamiento de los datos de los repositorios}
+    \begin {itemize}
+      \item Organización de los datos obtenidos
+      \item Parsear ficheros JSON de las llamadas a la API de GitHub para guardar únicamente los datos relevantes para el proyecto:
+        \begin{itemize}
+          \item Commits realizados sobre el repositorio
+          \item Usuario que ha participado en cada uno de los commits
+          \item Lenguaje de programación usado en cada commit
+          \item Total de usuarios que han participado en el repositorio
+        \end{itemize}
+      \item Creación de un fichero JSON para almacenar todos los datos resultantes del punto anterior:
+    \end{itemize}
+  \item \textbf{Creación de una aplicación web para permitir un uso más fácil del aplicativo}
+    \begin{itemize}
+        \item Uso de Flask para construir la aplicación web
+        \item Conectividad con la base de datos creada
+        \item Permitir al usuario la obtención de los datos de un repositorio a su elección
+        \item Representación de los datos de los repositorios
+    \end{itemize}
+  \item \textbf{Creación de una base de datos donde almacenar los análisis de los repositorios}
+    \begin{itemize}
+      \item Almacenar repositorios analizados
+      \item Almacenar usuarios contribuyentes a cada repositorio analizado
+      \item Almacenar usuarios con todas sus contribuciones a cada uno de los repositorios
+      \item Almacenar lenguajes usados en cada repositorio
+    \end{itemize}
+\end{itemize}
 \section{Planificación temporal}
 \label{sec:planificacion-temporal}
 
-A mí me gusta que aquí pongáis una descripción de lo que os ha llevado realizar el trabajo.
-Hay gente que añade un diagrama de GANTT.
-Lo importante es que quede claro cuánto tiempo llevas (tiempo natural, p.ej., 6 meses) y a qué nivel de esfuerzo (p.ej., principalmente los fines de semana).
+El total de duración del proyecto ha sido de aproximadamente 1 año. Contacté por primera vez con Gregorio; mi tutor, en octubre del año 2023, con la intención de comenzar con este proyecto, dando inicio desde noviembre y terminándolo a lo largo del anterior curso académico 2023/2024. Sin embargo, no ha sido hasta este presente curso 2024/2025 en el que he podido finalizar el trabajo, sobre todo debido a algunos parones que hice durante algunos meses del año anterior y a que, principalmente, se ha hecho en mi tiempo libre y durante los fines de semana. En la siguiente figura, se encuentra la planificación general final que ha seguido el proyecto a lo largo de todo este año en un diagrama de Gantt:
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -403,74 +354,106 @@ Lo importante es que quede claro cuánto tiempo llevas (tiempo natural, p.ej., 6
 \chapter{Estado del arte}
 \label{chap:estado}
 
-Descripción de las tecnologías que utilizas en tu trabajo. 
-Con dos o tres párrafos por cada tecnología, vale. 
-Se supone que aquí viene todo lo que no has hecho tú.
+En este proyecto se han utilizado múltiples tecnologías, siendo el lenguaje de programación Python el principal, y en el que se basan prácticamente todos los recursos que he utilizado.
 
-Puedes citar libros, como el de Bonabeau et al., sobre procesos estigmérgicos~\cite{bonabeau:_swarm}. 
-Me encantan los procesos estigmérgicos.
-Deberías leer más sobre ellos.
-Pero quizás no ahora, que tenemos que terminar la memoria para sacarnos por fin el título.
-Nota que el \~ \ añade un espacio en blanco, pero no deja que exista un salto de línea. 
-Imprescindible ponerlo para las citas.
+\section{Python}
+ \label{sec:Python}
 
-Citar es importantísimo en textos científico-técnicos. 
-Porque no partimos de cero.
-Es más, partir de cero es de tontos; lo suyo es aprovecharse de lo ya existente para construir encima y hacer cosas más sofisticadas.
-¿Dónde puedo encontrar textos científicos que referenciar?
-Un buen sitio es Google Scholar\footnote{\url{http://scholar.google.com}}.
-Por ejemplo, si buscas por ``stigmergy libre software'' para encontrar trabajo sobre software libre y el concepto de \emph{estigmergia} (¿te he comentado que me gusta el concepto de estigmergia ya?), encontrarás un artículo que escribí hace tiempo cuyo título es ``Self-organized development in libre software: a model based on the stigmergy concept''.
-Si pulsas sobre las comillas dobles (entre la estrella y el ``citado por ...'', justo debajo del extracto del resumen del artículo, te saldrá una ventana emergente con cómo citar.
-Abajo a la derecha, aparece un enlace BibTeX.
-Púlsalo y encontrarás la referencia en formato BibTeX, tal que así:
+Python~\cite{python:_python} es uno de los lenguajes de programación más utilizados durante los últimos años. Se debe, sobre todo, a su accesibilidad y facilidad que ofrece a los desarrolladores para realizar múltiples tareas. 
 
-{\footnotesize
-\begin{verbatim}
-@inproceedings{robles2005self,
-  title={Self-organized development in libre software:
-         a model based on the stigmergy concept},
-  author={Robles, Gregorio and Merelo, Juan Juli\'an 
-          and Gonz\'alez-Barahona, Jes\'us M.},
-  booktitle={ProSim'05},
-  year={2005}
-}
-\end{verbatim}
-}
+Es un lenguaje de programación de código abierto y gratuito creado por Guido van Rossum a principios de la década de los noventa, pero no ha hecho nada más que evolucionar durante todo este tiempo para agregar nuevas características en cada una de las versiones. Para este trabajo se ha utilizado la versión 3.11 de Python, sin embargo, aún sigue actualizandose, siendo la última versión en el momento de escribir esta memoria la versión 3.13. 
 
-Copia el texto en BibTeX y pégalo en el fichero \texttt{memoria.bib}, que es donde están las referencias bibliográficas.
-Para incluir la referencia en el texto de la memoria, deberás citarlo, como hemos hecho antes con~\cite{bonabeau:_swarm}, lo que pasa es que en vez de el identificador de la cita anterior (bonabeau:\_swarm), tendrás que poner el nuevo (robles2005self).
-Compila el fichero \texttt{memoria.tex} (\texttt{pdflatex memoria.tex}), añade la bibliografía (\texttt{bibtex memoria.aux}) y vuelve a compilar \texttt{memoria.tex} (\texttt{pdflatex memoria.tex})\ldots y \emph{voilà} ¡tenemos una nueva cita~\cite{robles2005self}!
+Las principales ventajas ~\cite{fernandez:_python} que ofrece sobre otros lenguajes son:
 
-También existe la posibilidad de poner notas al pie de página, por ejemplo, una para indicarte que visite la página del GSyC\footnote{\url{http://gsyc.es}}.
+\begin{itemize}
+  \item \textbf{Es un lenguaje interpretado}, es decir, no es necesario compilar el código para su ejecución, sino que en su lugar existe un intérprete que se encarga de la lectura del fichero y su ejecución.
+  \item \textbf{Es un lenguaje multiplataforma}, por lo que su ejecución no está limitada a un sistema o software específico. Es muy flexible desde este punto de vista.
+  \item \textbf{Facilidad de la sintaxis}. Es uno de los lenguajes preferidos para comenzar en el mundo de la programación debido a ello.
+  \item \textbf{Existencia de un garbage collector} que permite la limpieza automática de memoria y facilita en gran cantidad evitar gastos de memoria inútiles.
+\end{itemize}
+
+En mi caso, lo he escogido en este proyecto ya que, además de ser el lenguaje que más he usado tanto a lo largo de la carrera universitaria como en el mundo laboral, y por tanto ser el lenguaje del que más conocimiento tengo, quería aprender más sobre él usándolo en otros ámbitos que no conocía antes, como la interacción con una base de datos, o la creación de la plataforma web usando el módulo Flask que ofrece el propio Python.
+
+\section{Perceval}
+\label{sec:Perceval}
+Perceval es la librería de Python que me recomendó mi tutor para poder conseguir la mayoría de información necesaria para realizar los análisis de este proyecto. Consiste en un módulo que consigue recuperar datos relacionados con el desarrollo software de varias posibles fuentes como pueden ser Confluence, Bugzilla o Slack, aunque en este trabajo solo se ha usado para obtener datos de repositorios Git.
+
+Del modo que se ha usado Perceval en mi caso, ha sido para poder recuperar los commits de los distintos repositorios en formato JSON, lo que me ha permitido ver el historial de cambios de los repositorios y las personas que han contribuido a los mismos para realizar los análisis.
+\section{Flask}
+ \label{sec:Flask}
+
+Flask~\cite{flask:_flask} es un módulo de Python que consiste en un framework ligero para la creación de aplicaciones web. Está diseñado para ser sencillo y rápido, pero escalable a la construcción de aplicaciones complejas. Se usa en distintos ámbitos como aplicaciones web, como es el caso de este proyecto, pero también en microservicios, desarrollos de APIs...
+
+Se ha escogido Flask sobre otros frameworks para Python como puede ser Django ya que ofrece más flexibilidad y me permitía elegir los demás módulos que fueran necesarios para la personalización de mi web y hacerla de la manera que he pensado.
+
+\section{Jinja2}
+\label{sec:Jinja2}
+
+Jinja2~\cite{jinja:_jinja} es el motor de plantillas que usa Flask. Permite la generación de contenido web dinámico en la aplicaciones de manera eficiente y estructurada. Una de sus características principales que se ha usado en este proyecto es la utilización de una estructura base que cualquier otra plantilla puede heredar, lo que permite ahorrar bastante tiempo de desarrollo HTML o CSS.
+
+Su uso me ha permitido crear las páginas dinámicas en la que aparecen los análisis realizados de los repositorios, permitiéndome representarlos de manera sencilla y cómoda para mí como desarrollador, pero también, a imagen del usuario que podría visitar la web, fácil de entender. 
+
+\section{Git}
+\label{sec:Git}
+
+Git~\cite{git:_git}  es un sistema de control de versiones usado en proyectos de desarrollo de software. Realiza un seguimiento de los cambios en archivos de un proyecto, por lo que es muy útil en los casos donde un grupo de personas realizan estos cambios en los mismos ficheros al mismo tiempo.
+
+Permite a los desarrolladores conocer todo el historial de modificaciones que se han realizado sobre el proyecto, lo que facilita la organización y el alineamiento entre los propios contribuyentes. Se utiliza tanto en proyectos de código abierto y gratuito como este, como en proyectos comerciales de empresas, que utilizan Git para la gestión de versiones del software que crean.
 
 
+En este proyecto, además de para los repositorios Git que he escogido para realizar el análisis, se ha utilizado para hacer también, el control de versiones de mi propio proyecto, por lo que es fácil ver el progreso que ha seguido mi software a lo largo del tiempo, pues es posible ver el historial de cambios hechos durante este año. 
 
-\section{Sección 1} 
-\label{sec:seccion1}
+\section{GitHub}
+\label{sec:GitHub}
 
-Hemos hablado de cómo incluir figuras.
-Pero no hemos dicho nada de tablas.
-A mí me gustan las tablas.
-Mucho.
-Aquí un ejemplo de tabla, la Tabla~\ref{tab:ejemplo} (siento ser pesado, pero nota cómo he puesto la referencia).
+GitHub~\cite{github:_github}  es una plataforma para almacenar, compartir y trabajar junto a otros usuarios en proyectos de desarrollo. Sus principales características son:
 
-\begin{table}
- \begin{center}
-  \begin{tabular}{ | l | c | r |} % tenemos tres colummnas, la primera alineada a la izquierda (l), la segunda al centro (c) y la tercera a la derecha (r). El | indica que entre las columnas habrá una línea separadora.
-    \hline
-    Uno & 2 & 3 \\ \hline % el hline nos da una línea vertical
-    Cuatro & 5 & 6 \\ \hline
-    Siete & 8 & 9 \\
-    \hline
-  \end{tabular}
-  \caption{Ejemplo de tabla. Aquí viene una pequeña descripción (el \emph{caption}, el pie de tabla/figura) del contenido de la tabla. Si la tabla no es autoexplicativa, siempre viene bien aclararla aquí.}
-  \label{tab:ejemplo}
- \end{center}
-\end{table}
+\begin{itemize}
+  \item Compartir el trabajo junto a otras personas.
+  \item Seguir los cambios en el código a lo largo del tiempo, para el control de versiones de un proyecto.
+  \item Colaborar en proyectos con multitud de personas.
+  \item Permitir a otros usuarios de la plataforma que puedan revisar el código y realizar sugerencias para su mejora.
+  \item Creación y gestión de repositorios donde almacenar todo el código de un proyecto.
+\end{itemize}
 
-Hay un sitio en Internet donde puedes diseñar las tablas fácilmente y luego hacer un corta y pega del resultado en tu editor.
-Puedes probarlo en \url{https://www.tablesgenerator.com/}.
+Todos los repositorios analizados en este proyecto forman parte de la propia plataforma de GitHub, incluyendo también mi propio trabajo de fin de grado.
 
+\section{SQLAlchemy}
+\label{sec:SQLAlchemy}
+
+SQLAlchemy es una librería de Python usada para la interacción con una gran variedad de bases de datos. Permite crear modelos de datos y consultas de una manera sencilla y cercana a las clases de Python.
+
+Es un ORM (Object Relational Mapper), por lo que permite el mapeo de tablas de las bases de datos sin tener que escribir las consultas, sino que mediante los objetos de Python, podemos hacer esta función.
+
+Lo he usado en mi implementación con la base de datos SQLite que se ha hecho y que contiene el análisis de todos los repositorios.
+
+\section{SQLite}
+\label{sec:SQLite}
+
+SQLite es una base de datos integrada de código abierto. Su principal característica y diferencia con la mayoría de bases de datos SQL es que no tiene un proceso independiente al de la aplicación, sino que se encuentra contenida en la propia aplicación.
+
+Lo he usado por la facilidad que ofrece para la configuración de la propia base de datos, ya que, al estar dentro de la propia aplicación, no necesita configuración de red, lo que facilita bastante el uso de bases de datos para personas como yo, que no son expertos en ello.
+
+\section{HTML}
+\label{sec:HTML}
+
+HTML es un lenguaje de marcado que utiliza una serie de etiquetas con el objetivo de dar estructura a un contenido web. Representa el estándar de la visualización de páginas web y es utilizado por todos los grandes navegadores actuales.
+
+Todas las páginas que forman la aplicación web se han creado y estructurado mediante ficheros HTML.
+
+\section{CSS}
+\label{sec:CSS}
+
+CSS es el lenguaje mayoritariamente utilizado para dar estilo a una página web. Este lenguaje permite vincular los documentos de texto en formato HTML con hojas de estilo que contiene la información topográfica de los elementos visuales de la página, y que además, permite separar completamente la estructura de los contenidos, del estilo que estos van a tener ya en la visualización en la web.
+
+En este proyecto se ha utilizado CSS en todas las páginas para dar el estilo visual a los contenidos, utilizando además la librería Bootstrap para facilitar un diseño simple y que sirviera de plantilla para tener consistencia visual en toda la aplicación.
+
+\section{Bootstrap}
+\label{sec:Bootstrap}
+
+Bootstrap es un proyecto de código abierto que consiste en un framework de front-end que facilita el desarrollo de aplicaciones mediante un conjunto de herramientas y componentes pre-hechos como botones o formularios que permiten la personalización del diseño de una web.
+
+Se ha usado Bootstrap en el diseño de todas las páginas incluyendo botones, formularios, o el encabezado de la página web.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -482,40 +465,60 @@ Puedes probarlo en \url{https://www.tablesgenerator.com/}.
 \chapter{Diseño e implementación}
 \label{sec:diseno}
 
-Aquí viene todo lo que has hecho tú (tecnológicamente). 
-Puedes entrar hasta el detalle. 
-Es la parte más importante de la memoria, porque describe lo que has hecho tú.
-Eso sí, normalmente aconsejo no poner código, sino diagramas.
+En este apartado de la memoria se detalla el funcionamiento de la aplicación y todos sus componentes.
 
 
 
 \section{Arquitectura general} 
 \label{sec:arquitectura}
 
-Si tu proyecto es un software, siempre es bueno poner la arquitectura (que es cómo se estructura tu programa a ``vista de pájaro'').
-
-\begin{figure}
-  \centering
-  \includegraphics[width=9cm, keepaspectratio]{img/arquitectura.png}
-  \caption{Estructura del parser básico}
-  \label{fig:arquitectura}
-\end{figure}
+Este proyecto sigue un modelo cliente-servidor. El cliente en este caso, para el uso que está pensado, sería la aplicación web que se ejecuta desde el navegador y que permite realizar las peticiones de una manera más cómoda, accesible y sencilla al servidor, aunque obviamente, se podrían hacer estas peticiones "a mano" sin utilizar la aplicación web, y seguiría siendo el cliente. El servidor mientras tanto, espera a atender las peticiones que se envían a los endpoints que tiene definidos para finalmente dar la respuesta a los clientes.
 
 
-Por ejemplo, puedes verlo en la figura~\ref{fig:arquitectura}.
-\LaTeX \ pone las figuras donde mejor cuadran. 
-Y eso quiere decir que quizás no lo haga donde lo hemos puesto\ldots 
-Eso no es malo.
-A veces queda un poco raro, pero es la filosofía de \LaTeX: tú al contenido, que yo me encargo de la maquetación.
+Aunque en puntos posteriores entraremos más a fondo en cada uno de elementos de la aplicación, el flujo que sigue, a modo general es el siguiente:
 
 
+Un cliente cualquiera accede a la página web del proyecto, a la que he llamado OSSAnalyzer (viene de Open Source Software Analyzer), y haciendo click en el botón "Búsqueda de un repositorio concreto" en el encabezado de la página principal, provoca que el navegador lanze una petición GET al endpoint principal de la aplicación (/userrepo). El servidor, después, ofrece en la respuesta un formulario donde el usuario deberá introducir el nombre del repositorio y el nombre del propietario del repositorio, con el objetivo de hacer una petición POST al servidor, también al endpoint /userrepo. Al llamar a este endpoint con estos datos y con el método POST, el servidor realiza toda la parte interna de recolección de datos usando Perceval, realiza también el análisis de los datos obtenidos y además, también realiza la representación de este análisis en la propia aplicación web. No hay que olvidar también la base de datos que forma parte de la aplicación; ya que los datos de los repositorios que se vayan a analizar, es decir, que se vayan a introducir en el endpoint /userrepo se van a guardar en la base de datos para tenerlos almacenados.
+
+\section{Comenzando a usar la aplicación} 
+\label{sec:Empezando a usar la aplicación}
+
+El primer paso para comenzar a usar la aplicación es, obviamente, acceder a la web desde un navegador. Al entrar se presenta una página de inicio en la que se informa al usuario de la finalidad del proyecto y una pequeña guía para facilitar el uso de la aplicación, aunque es bastante sencillo.
+
+El usuario, debe escoger en ese momento entre dos opciones que se dan en el encabezado de la página:
+
+\begin{itemize}
+  \item Búsqueda de un repositorio concreto: Llama al endpoint /userrepo de la aplicación usando un método GET.
+  \item Búsqueda por usuario: Llama al endpoint /usersearch de la aplicación usando un método GET.
+\end{itemize}
  
-Recuerda que toda figura que añadas a tu memoria debe ser explicada.
-Sí, aunque te parezca evidente lo que se ve en la figura~\ref{fig:arquitectura}, la figura en sí solamente es un apoyo a tu texto.
-Así que explica lo que se ve en la figura, haciendo referencia a la misma tal y como ves aquí.
-Por ejemplo: En la figura~\ref{fig:arquitectura} se puede ver que la estructura del \emph{parser} básico, que consta de seis componentes diferentes: los datos se obtienen de la red, y según el tipo de dato, se pasará a un \emph{parser} específico y bla, bla, bla\ldots
+\section{Endpoint /userrepo} 
+\label{sec:/userrepo}
 
-Si utilizas una base de datos, no te olvides de incluir también un diagrama de entidad-relación.
+En el endpoint /userrepo es donde se encuentra la gran mayoría de la lógica de la aplicación.
+
+Al llamar a este endpoint con un método GET, el servidor responde a la petición con un formulario con dos campos que el cliente deberá rellenar: el nombre del repositorio, y el nombre del propietario del repositorio. También, se entrega en la respuesta un botón de envío, que al pulsarlo, provoca que el navegador lance una petición al endpoint /userrepo, pero ahora usando un método POST. Al ser una petición POST, los parámetros se encuentran en el body, y en este caso son dos: username (nombre de usuario del propietario del repositorio) y repo (nombre del repositorio).
+
+Una vez que llega al servidor esa petición POST, comienza la lógica del análisis del repositorio que el usuario ha escogidp:
+
+La primera tarea que realiza el servidor es la obtención de la rama por defecto del repositorio y el identificador del último commit que se ha subido en esa misma rama. El sentido de esto tiene que ver con la implementación con la base de datos, ya que desde un punto de vista de rendimiento, no tendría sentido guardar de nuevo en la base de datos un repositorio cuya última versión ya tenemos almacenado. La comprobación que realiza el servidor para saber si ese repositorio ya está almacenado en la base de datos se hace mediante una consulta contra la base de datos. Si ese repositorio no está almacenado, o si la fecha del último commit es anterior a la que se ha obtenido anteriormente, se procede con la recolección de datos del repositorio.
+
+Como hemos comentado en puntos anteriores, la recolección de datos de los repositorios se ha hecho usando la libería Perceval. Perceval nos permite obtener todos los datos de los commits realizados sobre un repositorio Git en formato JSON, lo que facilita después la selección de datos que nos interesan, y descartar aquellos datos inservibles para nuestro análisis.{Añadir ejemplo con un repo pequeño}
+
+Los datos que podemos sacar del uso de Perceval y que nos interesan en nuestro análisis principalmente, son:
+
+\begin{itemize}
+  \item Lista de usuarios que han realizado commits sobre el repositorio: para ello se ha creado la función obtain\_users en utils.py, que genera esta lista accediendo al campo Author de cada uno de los objetos (cada uno de los objetos representa un commit) del JSON obtenido del uso de Perceval.
+  \item Obtener los ficheros que ha modificado cada uno los usuarios de la lista creada anterior: usando la función obtain\_users\_files de utils.py, se genera un diccionario de listas con los archivos en los que ha trabajado cada usuario que ha participado en el repositorio.
+  \item Obtener las extensiones de los ficheros que ha modificado cada usuario para conocer el lenguaje sobre el que se han hecho las modificaciones: con la función obtain\_files\_extension del fichero utils.py se logra crear un diccionario con los lenguajes. Para ello se usa un diccionario llamado extensiones que se encuentra almacenado en un fichero de configuración JSON (OSSAnalyzerConfig.json). En este diccionario de extensiones se almacena como clave la extensión, y como valor el lenguaje de programación. Para la construcción de este diccionario se ha usado el fichero YAML languages.yml del repositorio Linguist de GitHub, que contiene una gran cantidad de lenguajes.
+  \item Obtener el total de modificaciones realizadas sobre un mismo lenguaje de programación de cada uno de los contribuyentes al repositorio: para ello se ha creado la función counter\_ext, almacenada también en utils.py y cuya salida consiste en un diccionario con la suma de modificaciones realizadas sobre todos los lenguajes que cada uno de los usuarios ha realizado.
+\end{itemize}
+
+Además para enriquecer algo más el análisis y ofrecer otros datos que no podemos obtener usando Perceval, se han incluido también algunas llamadas a la API de GitHub para obtener los siguientes datos:
+
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
