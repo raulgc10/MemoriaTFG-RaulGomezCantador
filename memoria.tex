@@ -480,6 +480,89 @@ Aunque en puntos posteriores entraremos más a fondo en cada uno de elementos de
 
 Un cliente cualquiera accede a la página web del proyecto, a la que he llamado OSSAnalyzer (viene de Open Source Software Analyzer), y haciendo click en el botón "Búsqueda de un repositorio concreto" en el encabezado de la página principal, provoca que el navegador lanze una petición GET al endpoint principal de la aplicación (/userrepo). El servidor, después, ofrece en la respuesta un formulario donde el usuario deberá introducir el nombre del repositorio y el nombre del propietario del repositorio, con el objetivo de hacer una petición POST al servidor, también al endpoint /userrepo. Al llamar a este endpoint con estos datos y con el método POST, el servidor realiza toda la parte interna de recolección de datos usando Perceval, realiza también el análisis de los datos obtenidos y además, también realiza la representación de este análisis en la propia aplicación web. No hay que olvidar también la base de datos que forma parte de la aplicación; ya que los datos de los repositorios que se vayan a analizar, es decir, que se vayan a introducir en el endpoint /userrepo se van a guardar en la base de datos para tenerlos almacenados.
 
+\section{Estructura del código del proyecto} 
+\label{sec:Estructura del código del proyecto}
+
+Para hacer más sencilla la explicación de partes del código en puntos posteriores, hablaré de la estructura de código del proyecto:
+
+\begin{verbatim}
+
+  OSSAnalyzer/
+  |---> main.py
+  |
+  |---> utils.py
+  |
+  |---> requests_to_github_api.py
+  |
+  |---> readme.md
+  |
+  |---> config/
+  |     |
+  |     |---> OSSAnalyzerConfig.json
+  |
+  |---> logs/     
+  |     |  
+  |     |--->OSSAnalyzer.log
+  |
+  |---> web/
+       |
+       |---> endpoints.py
+       |
+       |---> models.py
+       |
+       |---> __init__.py
+       |
+       |---> database.db
+       |
+       |---> static/
+       |     |
+       |     |---> mainpage.css
+       |     |
+       |     |---> mainpage.js
+       |     |
+       |     |---> userrepo.css
+       |     |
+       |     |---> userrepo.js
+       |     |
+       |     |---> formulario.css
+       |     |
+       |     |---> formulario.js
+       |     | 
+       |     |---> images/
+       |          |
+       |          |---> logoaplicacion.png
+       |
+       |---> templates/
+             |
+             |---> base.html
+             |
+             |---> mainpage.html
+             |
+             |---> userrepoForm.html
+             |
+             |---> userrepoResult.html
+             |
+             |---> usersearchForm.html
+             |
+             |---> usersearchResult.html.
+
+\end{verbatim}
+
+\begin{itemize}
+  \item \textbf{main.py}: Contiene la información necesaria para arrancar la aplicación.
+  \item \textbf{utils.py}: Contiene todas las funciones usadas para la recolección de datos de los repositorios obtenidos usando la librería Perceval. También contiene métodos para calcular los lenguajes minoritarios y los contribuyentes que han participado en los mismos.
+  \item \textbf{requests\_to\_github\_api.py}: Contiene todas las funciones usadas para la recolección de datos extra mediante llamadas a la API de GitHub.
+  \item \textbf{readme.md}: Es un fichero Markdown con una breve introducción a la aplicación. Se usa sobre todo para que al entrar en la página del repositorio en GitHub, cualquier usuario pueda ver fácilmente de qué trata el proyecto.
+  \item \textbf{config/OSSAnalyzerConfig.json}: Es un fichero de configuración en formato JSON que se usa principalmente para guardar configuraciones que sean modificables fácilmente y no haya que cambiar más código si fuera necesario. Contiene información sobre la IP y el puerto donde se inicia la aplicación, configuración de los logs, el token que se usa en todas las llamadas contra la API de GitHub y un diccionario con una gran cantidad de extensiones y el lenguaje que representan.
+  \item \textbf{logs/OSSAnalyzer.log}: En este fichero de log se escribe continuamente el estado de la aplicación, las peticiones que llegan y sus resultados, errores e información extra. Realmente este fichero tendría sentido si la aplicación estuviera corriendo en un servidor continuamente, ya que sirve para investigar posibles fallos.
+  \item \textbf{web/models.py}: En este fichero se definen los modelos de las tablas con sus correspondientes columnas en la base de datos.
+  \item \textbf{web/database.db}: En este fichero se almacena la base de datos SQLite3.
+  \item \textbf{web/endpoints.py}: En este fichero se definen todos los endpoints de la aplicación y las acciones que realizan cada uno de ellos.
+  \item \textbf{web/\_\_init\_\_.py}: Contiene la información para crear la aplicación y cargar todos los elementos, la base de datos, y los endpoints.
+  \item \textbf{web/static}: En este directorio se almacenan las imágenes, y los ficheros CSS y JavaScript de las páginas.
+  \item \textbf{web/templates}: Este directorio almacena los ficheros HTML con los templates que se modifican.
+\end{itemize}
+
 \section{Comenzando a usar la aplicación} 
 \label{sec:Empezando a usar la aplicación}
 
@@ -491,7 +574,7 @@ El usuario, debe escoger en ese momento entre dos opciones que se dan en el enca
   \item Búsqueda de un repositorio concreto: Llama al endpoint /userrepo de la aplicación usando un método GET.
   \item Búsqueda por usuario: Llama al endpoint /usersearch de la aplicación usando un método GET.
 \end{itemize}
- 
+
 \section{Endpoint /userrepo} 
 \label{sec:/userrepo}
 
@@ -516,8 +599,60 @@ Los datos que podemos sacar del uso de Perceval y que nos interesan en nuestro a
 
 Además para enriquecer algo más el análisis y ofrecer otros datos que no podemos obtener usando Perceval, se han incluido también algunas llamadas a la API de GitHub para obtener los siguientes datos:
 
+\begin{itemize}
+  \item Porcentaje de uso de cada uno de los lenguajes usados en el repositorio. Mediante la función obtain\_used\_languages\_on\_repo del fichero requests\_to\_github\_api.py se obtienen todos los ficheros almacenados en el repositorio. Una vez tenemos la lista con todos los ficheros, usando su extensión, se convierte a "lenguaje" de igual manera que se hace con los datos que hemos obtenido de Perceval anteriormente, es decir, usando el diccionario extensiones del fichero de configuración OSSAnalyzerConfig.json. Con ello ya tenemos el total de ficheros de cada lenguaje, por lo que es fácil obtener el porcentaje de cada uno de los lenguajes sobre el total. 
+  \item Número total de ficheros del repositorio. Se obtiene usando la función obtain\_num\_files del fichero requests\_to\_github\_api.py.
+\end{itemize}
 
+Por último, para terminar nuestra recolección de datos, puesto que nos centramos en los lenguajes minoritarios, necesitamos saber qué lenguajes son minoritarios en un repositorio, y la información sobre los mismos. Entendemos que un lenguaje es minoritario en un repositorio si representa una cuota menor del 5\% del total de un repositorio. Por ejemplo:
 
+Un repositorio contiene 5 lenguajes de programación: Python, HTML, CSS, JavaScript y un Dockerfile. Python representa el 80\% del repositorio, HTML un 10\%, CSS un 7\%, JavaScript, un 2\% y Dockerfile, el 1\% restante. En este caso, los lenguajes minoritarios serán JavaScript y Dockerfile.
+
+Teniendo esto en mente, debido a que se obtiene el porcentaje de uso de cada uno de los lenguajes usado en los repositorios como se ha comentado anteriormente, se puede saber cuales de los lenguajes que forman parte de un repositorio son minoritarios. Ahora que tenemos los lenguajes minoritarios, buscamos el resto de información sobre estos: los commits hechos sobre esos lenguajes y quién de los usuarios contribuyentes han realizado estos commits.
+
+Todo esto se hace de la siguiente manera:
+
+\begin{itemize}
+  \item Obtención de los lenguajes minoritarios: con el diccionario de porcentajes de cada uno de los lenguajes de un repositorio, usando la función obtain\_min\_languages del fichero utils.py nos quedamos con una lista con solo los lenguajes que representan menos del 5\% que hemos definido.
+  \item Número total de commits realizados sobre esos lenguajes minoritarios: se realiza un diccionario en el que se hace la suma total de commits realizados sobre cada lenguaje minoritario usando la lista anterior y los datos que hemos obtenido de los commits con Perceval con el total de modificaciones realizadas cada uno de los lenguajes por cada contribuyente al repositorio. Esta función la realiza el método obtain\_total\_commits\_min\_languages del fichero utils.py.
+  \item Obtención de los contribuyentes y su participación en los lenguajes minoritarios: mediante la función top\_contribuyebtes\_por\_lenguaje del fichero utils.py se construye un diccionario con el número de commits realizados por los usuarios que han contribuido en estos lenguajes.
+\end{itemize}
+
+Ya se tienen todos los datos necesarios para nuestro análisis, por tanto, se procede a su almacenamiento en la base de datos. 
+
+En caso de que el repositorio no esté almacenado,se crea una fila en la tabla Repository de la base de datos con diferentes columnas con cada uno de los datos de interés para el análisis. El otro caso que se puede dar es que el repositorio que se haya analizado sea uno que ya existía en la tabla Repository, pero de una versión posterior, por lo que en lugar de crear una nueva fila, se actualizan las columnas de la fila ya existente, de manera que no se gasta espacio innecesario en la base de datos.
+
+También, además de almacenar cada repositorio en la tabla Repository, se guardan todos los usuarios que han participado en cada uno de los repositorios analizados junto a los repositorios que ha participado y los commits que ha realizado en los mismos. Esto nos permite ver el expertise de cada uno de los usuarios y conocer en qué lenguaje se especializa y qué número de lenguajes totales ha usado en todos los repositorios que haya participado y se hayan analizado previamente en la aplicación. Todo esto se almacena en la tabla User\_expertise de la base de datos.
+
+Una vez almacenados los distintos datos, solo queda la representación de los mismos en la aplicación web. Se presenta de la siguiente manera: {imagen}
+
+En la parte superior central, se informa al usuario del repositorio que se ha pedido analizar y el total de ficheros que tiene el repositorio.
+
+En la parte izquierda, se presenta una gráfica circular con la representación de porcentaje de cada uno de los lenguajes usados junto a una leyenda para inforar al usuario del número de porcentaje y el color que representa. La gráfica se genera a partir del diccionario con el porcentaje de uso de cada uno de los lenguajes usados en el repositorio que se ha obtenido en la recolección de datos usando la librería de python Matplotlib. Además, se presentan los lenguajes minoritarios del repositorio y el número de commits totales realizados sobre cada uno de ellos. Si se clicka en cualquiera de ellos, muestra a los usuarios que han realizado los commits y la cantidad.
+
+En la parte derecha, se muestran todos los usuarios que han contribuido, y al hacer click sobre cualquiera de ellos, muestra los commits realizados sobre cada uno de los lenguajes del repositorio.
+
+Por otro lado, si el repositorio que el usuario pide analizar ya tiene los datos de la última versión almacenada en la base de datos, estos se recuperan mediante una consulta en la que se pide a la tabla Repository la fila correspondiente al repositorio, y con ella se recuperan de nuevo todos los datos para representarlos en la web.
+
+\section{Endpoint /usersearch} 
+\label{sec:/usersearch}
+
+El objetivo del endpoint /usersearch es facilitar al usuario todos los repositorios públicos que pertenecen a un mismo propietario de manera que pueda localizar fácilmente los repositorios de un mismo usuario sobre los que hacer los análisis de lenguajes minoritarios. Sobre todo, está dirigido de cara a usuarios propietarios que consistan en un grupo de personas que suelen participar en los mismos proyectos.
+
+El funcionamiento es de la siguiente manera:
+
+\begin{itemize}
+  \item En caso de que llegue una petición al endpoint con método GET, se ofrece en la respuesta un formulario donde el usuario debe indicar el nombre de usuario de GitHub del cual quiera consultar los repositorios junto a un botón de envío para provocar el envío de una petición al mismo endpoint /userrepo, pero en este caso, con método POST cuyo cuerpo contiene un parámetro llamado username y su valor es lo que haya intoducido el usuario.
+  \item Cuando llega esa petición POST, el servidor procede a buscar los repositorios públicos del usuario que ha llegado en el body de la petición. Esto se hace mediante la función obtain\_user\_repos del fichero requests\_to\_github\_api.py, cuya salida es un diccionario con el nombre de todos los repositorios que posee ese usuario. Este diccionario es lo que se forma la respuesta final del endpoint.
+\end{itemize}
+
+Al finalizar, se representa de la siguiente manera en la aplicación web:
+
+En la parte superior se informa al usuario del nombre de usuario que ha escogido.
+
+En la parte inferior se muestran todos los repositorios públicos del usuario.
+
+Lo que hace que facilite al usuario la experiencia de analizar varios repositorios de un mismo usuario es que, al clickar en cualquiera de los repositorios que aparecen en la lista, se realiza una llamada POST al endpoint /userrepo con el nombre de usuario y el nombre del repositorio. Como se ha explicado en el punto anterior, en el endpoint /userrepo es donde se realizan los análisis. 
 
 
 
