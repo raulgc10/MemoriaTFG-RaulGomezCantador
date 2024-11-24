@@ -30,7 +30,7 @@
 \usepackage{float}  %% H para posicionar figuras
 \usepackage[nottoc, notlot, notlof, notindex]{tocbibind} %% Opciones de índice
 \usepackage{latexsym}  %% Logo LaTeX
-
+\usepackage{booktabs}
 % Escribe el título y el nombre del autor / autora para que se use bien
 % en otras partes de la plantilla
 % Dependiendo de las partes de la plantilla, a veces aparecerán tal
@@ -58,38 +58,38 @@
 % PORTADA
 
 \begin{titlepage}
-\begin{center}
-\includegraphics[scale=0.6]{img/URJ_logo_Color_POS.png}
+  \begin{center}
+    \includegraphics[scale=0.6]{img/URJ_logo_Color_POS.png}
 
-\vspace{1.75cm}
+    \vspace{1.75cm}
 
-\LARGE
-ESCUELA DE INGENIERÍA DE FUENLABRADA
-\vspace{1cm}
+    \LARGE
+    ESCUELA DE INGENIERÍA DE FUENLABRADA
+    \vspace{1cm}
 
-\LARGE
-TITULACIÓN EN MAYÚSCULAS
+    \LARGE
+    TITULACIÓN EN MAYÚSCULAS
 
-\vspace{1cm}
-\LARGE
-\textbf{TRABAJO FIN DE GRADO}
+    \vspace{1cm}
+    \LARGE
+    \textbf{TRABAJO FIN DE GRADO}
 
-\vspace{2cm}
+    \vspace{2cm}
 
-\Large
-\MakeUppercase{\thetitle}
+    \Large
+    \MakeUppercase{\thetitle}
 
-\vspace{2cm}
+    \vspace{2cm}
 
-\large
-Autor : \theauthor \\
-Tutor : Dr. Gregorio Robles Martínez/a\\
-\vspace{1cm}
+    \large
+    Autor : \theauthor \\
+    Tutor : Dr. Gregorio Robles Martínez/a\\
+    \vspace{1cm}
 
-\large
-Curso académico 2024/2025
+    \large
+    Curso académico 2024/2025
 
-\end{center}
+  \end{center}
 \end{titlepage}
 
 \newpage
@@ -106,17 +106,17 @@ Curso académico 2024/2025
 
 \vspace{-4cm}
 \begin{center}
-\LARGE
-\textbf{Trabajo Fin de Grado/Máster}
+  \LARGE
+  \textbf{Trabajo Fin de Grado/Máster}
 
-\vspace{1cm}
-\large
-\thetitle
+  \vspace{1cm}
+  \large
+  \thetitle
 
-\vspace{0.8cm}
-\large
-\textbf{Autor :} \theauthor \\
-\textbf{Tutor :} Dr. Gregorio Robles Martínez/a
+  \vspace{0.8cm}
+  \large
+  \textbf{Autor :} \theauthor \\
+  \textbf{Tutor :} Dr. Gregorio Robles Martínez/a
 
 \end{center}
 
@@ -140,7 +140,7 @@ y habiendo obtenido la siguiente \textbf{Calificación:}
 
 \vspace{1cm}
 \begin{flushright}
-Fuenlabrada, a \qquad$\;\,$ de \qquad\qquad\qquad\qquad de 202X
+  Fuenlabrada, a \qquad$\;\,$ de \qquad\qquad\qquad\qquad de 202X
 \end{flushright}
 
 \vspace{1cm}
@@ -163,8 +163,8 @@ Este documento se distribuye bajo la licencia ``Atribución-CompartirIgual 4.0 I
 \chapter*{}
 \pagenumbering{Roman} % para comenzar la numeracion de paginas en numeros romanos
 \begin{flushright}
-\textit{Dedicado a \\
-mi familia / mi abuelo / mi abuela}
+  \textit{Dedicado a \\
+    mi familia / mi abuelo / mi abuela}
 \end{flushright}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -174,7 +174,7 @@ mi familia / mi abuelo / mi abuela}
 %\addcontentsline{toc}{chapter}{Agradecimientos} % si queremos que aparezca en el índice
 \markboth{AGRADECIMIENTOS}{AGRADECIMIENTOS} % encabezado 
 
-Aquí vienen los agradecimientos\ldots Aunque está bien acordarse de la pareja, no hay que olvidarse de dar las gracias a tu madre, que aunque a veces no lo parezca disfrutará tanto de tus logros como tú\ldots 
+Aquí vienen los agradecimientos\ldots Aunque está bien acordarse de la pareja, no hay que olvidarse de dar las gracias a tu madre, que aunque a veces no lo parezca disfrutará tanto de tus logros como tú\ldots
 Además, la pareja quizás no sea para siempre, pero tu madre sí.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -185,7 +185,7 @@ Además, la pareja quizás no sea para siempre, pero tu madre sí.
 \markboth{RESUMEN}{RESUMEN} % encabezado
 
 Aquí viene un resumen del proyecto.
-Ha de constar de tres o cuatro párrafos, donde se presente de manera clara y concisa de qué va el proyecto. 
+Ha de constar de tres o cuatro párrafos, donde se presente de manera clara y concisa de qué va el proyecto.
 Han de quedar respondidas las siguientes preguntas:
 
 \begin{itemize}
@@ -203,7 +203,7 @@ Lo mejor es escribir el resumen al final.
 %\addcontentsline{toc}{chapter}{Summary} % si queremos que aparezca en el índice
 \markboth{SUMMARY}{SUMMARY} % encabezado
 
-Here comes a translation of the ``Resumen'' into English. 
+Here comes a translation of the ``Resumen'' into English.
 Please, double check it for correct grammar and spelling.
 As it is the translation of the ``Resumen'', which is supposed to be written at the end, this as well should be filled out just before submitting.
 
@@ -218,10 +218,10 @@ As it is the translation of the ``Resumen'', which is supposed to be written at 
 % y comentar/descomentar esa instrucción de LaTeX.
 
 %%%% Índice de contenidos
-\tableofcontents 
+\tableofcontents
 %%%% Índice de figuras
 \cleardoublepage
-%\addcontentsline{toc}{chapter}{Lista de figuras} % para que aparezca en el indice de contenidos
+\addcontentsline{toc}{chapter}{Lista de figuras} % para que aparezca en el indice de contenidos
 \listoffigures % indice de figuras
 %%%% Índice de tablas
 %\cleardoublepage
@@ -263,15 +263,15 @@ La memoria se estructura de la siguiente manera:
 
 \begin{itemize}
   \item \textbf{Capítulo 1: Introducción.} Se presenta la motivación y una breve descripción de lo que se afronta en este proyecto, además de informar de la estructura del mismo.
-  
+
   \item \textbf{Capítulo 2: Objetivos.} Se describen los objetivos a alcanzar durante toda la consecución del proyecto, incluyendo tanto planificación temporal como objetivos técnicos.
-  
+
   \item \textbf{Capítulo 3: Estado del arte.} Explicación de las distintas tecnologías usadas a lo largo del proyecto. Incluye la información sobre la aplicación web, y como se realiza la recopilación y guardado de datos en la base de datos.
-  
+
   \item \textbf{Capítulo 4: Diseño e implementación.} Se realiza una explicación sobre el diseño en conjunto de todo el proyecto, y el por qué de como se ha implementado.
-  
+
   \item \textbf{Capítulo 5: Resultados.} Se realiza el análisis final de los resultados obtenidos.
-  
+
   \item \textbf{Capítulo 6: Conclusiones.} Incluye la conclusión final del proyecto.
 
 \end{itemize}
@@ -306,44 +306,50 @@ Se han seguido los siguientes objetivos específicos para llegar a cumplir el ob
 
 \begin{itemize}
   \item \textbf{Obtención de datos de los repositorios de plataformas Git}
-    \begin {itemize} 
-      \item Búsqueda de una herramienta para obtener los datos usando Python
-      \item Investigación del módulo de python Perceval usado para la obtención de commits realizados en los respositorios
-      \item Investigación de llamadas a la API de GitHub para obtener información adicional
-      \item Guardado de datos en formato JSON para su posterior tratamiento
-    \end{itemize}
-  \item \textbf{Tratamiento de los datos de los repositorios}
-    \begin {itemize}
-      \item Organización de los datos obtenidos
-      \item Parsear ficheros JSON de las llamadas a la API de GitHub para guardar únicamente los datos relevantes para el proyecto:
         \begin{itemize}
-          \item Commits realizados sobre el repositorio
-          \item Usuario que ha participado en cada uno de los commits
-          \item Lenguaje de programación usado en cada commit
-          \item Total de usuarios que han participado en el repositorio
-        \end{itemize}
-      \item Creación de un fichero JSON para almacenar todos los datos resultantes del punto anterior:
-    \end{itemize}
-  \item \textbf{Creación de una aplicación web para permitir un uso más fácil del aplicativo}
-    \begin{itemize}
-        \item Uso de Flask para construir la aplicación web
-        \item Conectividad con la base de datos creada
-        \item Permitir al usuario la obtención de los datos de un repositorio a su elección
-        \item Representación de los datos de los repositorios
-    \end{itemize}
-  \item \textbf{Creación de una base de datos donde almacenar los análisis de los repositorios}
-    \begin{itemize}
-      \item Almacenar repositorios analizados
-      \item Almacenar usuarios contribuyentes a cada repositorio analizado
-      \item Almacenar usuarios con todas sus contribuciones a cada uno de los repositorios
-      \item Almacenar lenguajes usados en cada repositorio
-    \end{itemize}
+  \item Búsqueda de una herramienta para obtener los datos usando Python
+  \item Investigación del módulo de python Perceval usado para la obtención de commits realizados en los respositorios
+  \item Investigación de llamadas a la API de GitHub para obtener información adicional
+  \item Guardado de datos en formato JSON para su posterior tratamiento
+\end{itemize}
+\item \textbf{Tratamiento de los datos de los repositorios}
+\begin{itemize}
+\item Organización de los datos obtenidos
+\item Parsear ficheros JSON de las llamadas a la API de GitHub para guardar únicamente los datos relevantes para el proyecto:
+\begin{itemize}
+  \item Commits realizados sobre el repositorio
+  \item Usuario que ha participado en cada uno de los commits
+  \item Lenguaje de programación usado en cada commit
+  \item Total de usuarios que han participado en el repositorio
+\end{itemize}
+\item Creación de un fichero JSON para almacenar todos los datos resultantes del punto anterior:
+\end{itemize}
+\item \textbf{Creación de una aplicación web para permitir un uso más fácil del aplicativo}
+\begin{itemize}
+  \item Uso de Flask para construir la aplicación web
+  \item Conectividad con la base de datos creada
+  \item Permitir al usuario la obtención de los datos de un repositorio a su elección
+  \item Representación de los datos de los repositorios
+\end{itemize}
+\item \textbf{Creación de una base de datos donde almacenar los análisis de los repositorios}
+\begin{itemize}
+  \item Almacenar repositorios analizados
+  \item Almacenar usuarios contribuyentes a cada repositorio analizado
+  \item Almacenar usuarios con todas sus contribuciones a cada uno de los repositorios
+  \item Almacenar lenguajes usados en cada repositorio
+\end{itemize}
 \end{itemize}
 \section{Planificación temporal}
 \label{sec:planificacion-temporal}
 
-El total de duración del proyecto ha sido de aproximadamente 1 año. Contacté por primera vez con Gregorio; mi tutor, en octubre del año 2023, con la intención de comenzar con este proyecto, dando inicio desde noviembre y terminándolo a lo largo del anterior curso académico 2023/2024. Sin embargo, no ha sido hasta este presente curso 2024/2025 en el que he podido finalizar el trabajo, sobre todo debido a algunos parones que hice durante algunos meses del año anterior y a que, principalmente, se ha hecho en mi tiempo libre y durante los fines de semana. En la siguiente figura, se encuentra la planificación general final que ha seguido el proyecto a lo largo de todo este año en un diagrama de Gantt:
+El total de duración del proyecto ha sido de aproximadamente 1 año. Contacté por primera vez con Gregorio; mi tutor, en octubre del año 2023, con la intención de comenzar con este proyecto, dando inicio desde noviembre y terminándolo a lo largo del anterior curso académico 2023/2024. Sin embargo, no ha sido hasta este presente curso 2024/2025 en el que he podido finalizar el trabajo, sobre todo debido a algunos parones que hice durante algunos meses del curso anterior y a que, principalmente, se ha hecho en mi tiempo libre y durante los fines de semana. En la siguiente figura, se encuentra la planificación general final que ha seguido el proyecto a lo largo de todo este año en un diagrama de Gantt:
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/diagramagantt.png}
+  \caption{Diagrama de Gantt de la planificación temporal del proyecto}
+    \label{figura:diagrama}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -357,11 +363,11 @@ El total de duración del proyecto ha sido de aproximadamente 1 año. Contacté 
 En este proyecto se han utilizado múltiples tecnologías, siendo el lenguaje de programación Python el principal, y en el que se basan prácticamente todos los recursos que he utilizado.
 
 \section{Python}
- \label{sec:Python}
+\label{sec:Python}
 
-Python~\cite{python:_python} es uno de los lenguajes de programación más utilizados durante los últimos años. Se debe, sobre todo, a su accesibilidad y facilidad que ofrece a los desarrolladores para realizar múltiples tareas. 
+Python~\cite{python:_python} es uno de los lenguajes de programación más utilizados durante los últimos años. Se debe, sobre todo, a su accesibilidad y facilidad que ofrece a los desarrolladores para realizar múltiples tareas.
 
-Es un lenguaje de programación de código abierto y gratuito creado por Guido van Rossum a principios de la década de los noventa, pero no ha hecho nada más que evolucionar durante todo este tiempo para agregar nuevas características en cada una de las versiones. Para este trabajo se ha utilizado la versión 3.11 de Python, sin embargo, aún sigue actualizandose, siendo la última versión en el momento de escribir esta memoria la versión 3.13. 
+Es un lenguaje de programación de código abierto y gratuito creado por Guido van Rossum a principios de la década de los noventa, pero no ha hecho nada más que evolucionar durante todo este tiempo para agregar nuevas características en cada una de las versiones. Para este trabajo se ha utilizado la versión 3.11 de Python, sin embargo, aún sigue actualizandose, siendo la última versión en el momento de escribir esta memoria la versión 3.13.
 
 Las principales ventajas ~\cite{fernandez:_python} que ofrece sobre otros lenguajes son:
 
@@ -380,7 +386,7 @@ Perceval es la librería de Python que me recomendó mi tutor para poder consegu
 
 Del modo que se ha usado Perceval en mi caso, ha sido para poder recuperar los commits de los distintos repositorios en formato JSON, lo que me ha permitido ver el historial de cambios de los repositorios y las personas que han contribuido a los mismos para realizar los análisis.
 \section{Flask}
- \label{sec:Flask}
+\label{sec:Flask}
 
 Flask~\cite{flask:_flask} es un módulo de Python que consiste en un framework ligero para la creación de aplicaciones web. Está diseñado para ser sencillo y rápido, pero escalable a la construcción de aplicaciones complejas. Se usa en distintos ámbitos como aplicaciones web, como es el caso de este proyecto, pero también en microservicios, desarrollos de APIs...
 
@@ -391,7 +397,7 @@ Se ha escogido Flask sobre otros frameworks para Python como puede ser Django ya
 
 Jinja2~\cite{jinja:_jinja} es el motor de plantillas que usa Flask. Permite la generación de contenido web dinámico en la aplicaciones de manera eficiente y estructurada. Una de sus características principales que se ha usado en este proyecto es la utilización de una estructura base que cualquier otra plantilla puede heredar, lo que permite ahorrar bastante tiempo de desarrollo HTML o CSS.
 
-Su uso me ha permitido crear las páginas dinámicas en la que aparecen los análisis realizados de los repositorios, permitiéndome representarlos de manera sencilla y cómoda para mí como desarrollador, pero también, a imagen del usuario que podría visitar la web, fácil de entender. 
+Su uso me ha permitido crear las páginas dinámicas en la que aparecen los análisis realizados de los repositorios, permitiéndome representarlos de manera sencilla y cómoda para mí como desarrollador, pero también, a imagen del usuario que podría visitar la web, fácil de entender.
 
 \section{Git}
 \label{sec:Git}
@@ -401,7 +407,7 @@ Git~\cite{git:_git}  es un sistema de control de versiones usado en proyectos de
 Permite a los desarrolladores conocer todo el historial de modificaciones que se han realizado sobre el proyecto, lo que facilita la organización y el alineamiento entre los propios contribuyentes. Se utiliza tanto en proyectos de código abierto y gratuito como este, como en proyectos comerciales de empresas, que utilizan Git para la gestión de versiones del software que crean.
 
 
-En este proyecto, además de para los repositorios Git que he escogido para realizar el análisis, se ha utilizado para hacer también, el control de versiones de mi propio proyecto, por lo que es fácil ver el progreso que ha seguido mi software a lo largo del tiempo, pues es posible ver el historial de cambios hechos durante este año. 
+En este proyecto, además de para los repositorios Git que he escogido para realizar el análisis, se ha utilizado para hacer también, el control de versiones de mi propio proyecto, por lo que es fácil ver el progreso que ha seguido mi software a lo largo del tiempo, pues es posible ver el historial de cambios hechos durante este año.
 
 \section{GitHub}
 \label{sec:GitHub}
@@ -469,7 +475,7 @@ En este apartado de la memoria se detalla el funcionamiento de la aplicación y 
 
 
 
-\section{Arquitectura general} 
+\section{Arquitectura general}
 \label{sec:arquitectura}
 
 Este proyecto sigue un modelo cliente-servidor. El cliente en este caso, para el uso que está pensado, sería la aplicación web que se ejecuta desde el navegador y que permite realizar las peticiones de una manera más cómoda, accesible y sencilla al servidor, aunque obviamente, se podrían hacer estas peticiones "a mano" sin utilizar la aplicación web, y seguiría siendo el cliente. El servidor mientras tanto, espera a atender las peticiones que se envían a los endpoints que tiene definidos para finalmente dar la respuesta a los clientes.
@@ -477,10 +483,18 @@ Este proyecto sigue un modelo cliente-servidor. El cliente en este caso, para el
 
 Aunque en puntos posteriores entraremos más a fondo en cada uno de elementos de la aplicación, el flujo que sigue, a modo general es el siguiente:
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/arquitecturageneralv2.jpg}
+  \caption{Arquitectura general de la aplicación}
+  \label{figura:arqgeneral}
+\end{figure}
 
 Un cliente cualquiera accede a la página web del proyecto, a la que he llamado OSSAnalyzer (viene de Open Source Software Analyzer), y haciendo click en el botón "Búsqueda de un repositorio concreto" en el encabezado de la página principal, provoca que el navegador lanze una petición GET al endpoint principal de la aplicación (/userrepo). El servidor, después, ofrece en la respuesta un formulario donde el usuario deberá introducir el nombre del repositorio y el nombre del propietario del repositorio, con el objetivo de hacer una petición POST al servidor, también al endpoint /userrepo. Al llamar a este endpoint con estos datos y con el método POST, el servidor realiza toda la parte interna de recolección de datos usando Perceval, realiza también el análisis de los datos obtenidos y además, también realiza la representación de este análisis en la propia aplicación web. No hay que olvidar también la base de datos que forma parte de la aplicación; ya que los datos de los repositorios que se vayan a analizar, es decir, que se vayan a introducir en el endpoint /userrepo se van a guardar en la base de datos para tenerlos almacenados.
 
-\section{Estructura del código del proyecto} 
+Además, está disponible también el endpoint /usersearch, que facilita la búsqueda de los repositorios perteneciente a un usuario que el cliente debe escoger. Esto se hace de manera que con una petición GET, el servidor devuelve al cliente un formulario que debe rellenar con el usuario propietario, y al enviarlo, se realiza una petición POST, con la que el servidor, después de procesarla, le ofrece al cliente la lista de repositorios que posee ese usuario para que posteriormente pueda analizarlos.
+
+\section{Estructura del código del proyecto}
 \label{sec:Estructura del código del proyecto}
 
 Para hacer más sencilla la explicación de partes del código en puntos posteriores, hablaré de la estructura de código del proyecto:
@@ -563,7 +577,7 @@ Para hacer más sencilla la explicación de partes del código en puntos posteri
   \item \textbf{web/templates}: Este directorio almacena los ficheros HTML con los templates que se modifican.
 \end{itemize}
 
-\section{Comenzando a usar la aplicación} 
+\section{Comenzando a usar la aplicación}
 \label{sec:Empezando a usar la aplicación}
 
 El primer paso para comenzar a usar la aplicación es, obviamente, acceder a la web desde un navegador. Al entrar se presenta una página de inicio en la que se informa al usuario de la finalidad del proyecto y una pequeña guía para facilitar el uso de la aplicación, aunque es bastante sencillo.
@@ -575,18 +589,43 @@ El usuario, debe escoger en ese momento entre dos opciones que se dan en el enca
   \item Búsqueda por usuario: Llama al endpoint /usersearch de la aplicación usando un método GET.
 \end{itemize}
 
-\section{Endpoint /userrepo} 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/paginaprincipal.png}
+  \caption{Página inicial de la aplicación}
+  \label{figura:appmainpage}
+\end{figure}
+
+
+\section{Endpoint /userrepo}
 \label{sec:/userrepo}
 
 En el endpoint /userrepo es donde se encuentra la gran mayoría de la lógica de la aplicación.
 
 Al llamar a este endpoint con un método GET, el servidor responde a la petición con un formulario con dos campos que el cliente deberá rellenar: el nombre del repositorio, y el nombre del propietario del repositorio. También, se entrega en la respuesta un botón de envío, que al pulsarlo, provoca que el navegador lance una petición al endpoint /userrepo, pero ahora usando un método POST. Al ser una petición POST, los parámetros se encuentran en el body, y en este caso son dos: username (nombre de usuario del propietario del repositorio) y repo (nombre del repositorio).
 
-Una vez que llega al servidor esa petición POST, comienza la lógica del análisis del repositorio que el usuario ha escogidp:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/userrepoget.png}
+  \caption{Respuesta con el formulario a la petición con método GET}
+  \label{figura:userrepoget}
+\end{figure}
+Una vez que llega al servidor esa petición POST, comienza la lógica del análisis del repositorio que el usuario ha escogido:
 
 La primera tarea que realiza el servidor es la obtención de la rama por defecto del repositorio y el identificador del último commit que se ha subido en esa misma rama. El sentido de esto tiene que ver con la implementación con la base de datos, ya que desde un punto de vista de rendimiento, no tendría sentido guardar de nuevo en la base de datos un repositorio cuya última versión ya tenemos almacenado. La comprobación que realiza el servidor para saber si ese repositorio ya está almacenado en la base de datos se hace mediante una consulta contra la base de datos. Si ese repositorio no está almacenado, o si la fecha del último commit es anterior a la que se ha obtenido anteriormente, se procede con la recolección de datos del repositorio.
 
-Como hemos comentado en puntos anteriores, la recolección de datos de los repositorios se ha hecho usando la libería Perceval. Perceval nos permite obtener todos los datos de los commits realizados sobre un repositorio Git en formato JSON, lo que facilita después la selección de datos que nos interesan, y descartar aquellos datos inservibles para nuestro análisis.{Añadir ejemplo con un repo pequeño}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/flujo1.jpg}
+  \caption{Flujo de la aplicación para consultar si existe la última versión de un repositorio en la base de datos}
+  \label{figura:flujoconsulta}
+\end{figure}
+
+
+Como hemos comentado en puntos anteriores, la recolección de datos de los repositorios se ha hecho usando la libería Perceval. Perceval nos permite obtener todos los datos de los commits realizados sobre un repositorio Git en formato JSON, lo que facilita después la selección de datos que nos interesan, y descartar aquellos datos inservibles para nuestro análisis.
+
+
 
 Los datos que podemos sacar del uso de Perceval y que nos interesan en nuestro análisis principalmente, son:
 
@@ -600,7 +639,7 @@ Los datos que podemos sacar del uso de Perceval y que nos interesan en nuestro a
 Además para enriquecer algo más el análisis y ofrecer otros datos que no podemos obtener usando Perceval, se han incluido también algunas llamadas a la API de GitHub para obtener los siguientes datos:
 
 \begin{itemize}
-  \item Porcentaje de uso de cada uno de los lenguajes usados en el repositorio. Mediante la función obtain\_used\_languages\_on\_repo del fichero requests\_to\_github\_api.py se obtienen todos los ficheros almacenados en el repositorio. Una vez tenemos la lista con todos los ficheros, usando su extensión, se convierte a "lenguaje" de igual manera que se hace con los datos que hemos obtenido de Perceval anteriormente, es decir, usando el diccionario extensiones del fichero de configuración OSSAnalyzerConfig.json. Con ello ya tenemos el total de ficheros de cada lenguaje, por lo que es fácil obtener el porcentaje de cada uno de los lenguajes sobre el total. 
+  \item Porcentaje de uso de cada uno de los lenguajes usados en el repositorio. Mediante la función obtain\_used\_languages\_on\_repo del fichero requests\_to\_github\_api.py se obtienen todos los ficheros almacenados en el repositorio. Una vez tenemos la lista con todos los ficheros, usando su extensión, se convierte a "lenguaje" de igual manera que se hace con los datos que hemos obtenido de Perceval anteriormente, es decir, usando el diccionario extensiones del fichero de configuración OSSAnalyzerConfig.json. Con ello ya tenemos el total de ficheros de cada lenguaje, por lo que es fácil obtener el porcentaje de cada uno de los lenguajes sobre el total.
   \item Número total de ficheros del repositorio. Se obtiene usando la función obtain\_num\_files del fichero requests\_to\_github\_api.py.
 \end{itemize}
 
@@ -618,23 +657,65 @@ Todo esto se hace de la siguiente manera:
   \item Obtención de los contribuyentes y su participación en los lenguajes minoritarios: mediante la función top\_contribuyebtes\_por\_lenguaje del fichero utils.py se construye un diccionario con el número de commits realizados por los usuarios que han contribuido en estos lenguajes.
 \end{itemize}
 
-Ya se tienen todos los datos necesarios para nuestro análisis, por tanto, se procede a su almacenamiento en la base de datos. 
+Ya se tienen todos los datos necesarios para nuestro análisis, por tanto, se procede a su almacenamiento en la base de datos.
 
 En caso de que el repositorio no esté almacenado,se crea una fila en la tabla Repository de la base de datos con diferentes columnas con cada uno de los datos de interés para el análisis. El otro caso que se puede dar es que el repositorio que se haya analizado sea uno que ya existía en la tabla Repository, pero de una versión posterior, por lo que en lugar de crear una nueva fila, se actualizan las columnas de la fila ya existente, de manera que no se gasta espacio innecesario en la base de datos.
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/tablarepository.png}
+  \caption{Tabla Repository}
+  \label{figura:tablarepo}
+\end{figure}
+
 También, además de almacenar cada repositorio en la tabla Repository, se guardan todos los usuarios que han participado en cada uno de los repositorios analizados junto a los repositorios que ha participado y los commits que ha realizado en los mismos. Esto nos permite ver el expertise de cada uno de los usuarios y conocer en qué lenguaje se especializa y qué número de lenguajes totales ha usado en todos los repositorios que haya participado y se hayan analizado previamente en la aplicación. Todo esto se almacena en la tabla User\_expertise de la base de datos.
 
-Una vez almacenados los distintos datos, solo queda la representación de los mismos en la aplicación web. Se presenta de la siguiente manera: {imagen}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/tablauser_expertise.png}
+  \caption{Tabla User\_expertise}
+  \label{figura:tablaue}
+\end{figure}
+
+Por último, se almacenan los datos de los distintos lenguajes que han formado ese repositorio. Para ello, se crea un diccionario usando los datos obtenidos con Perceval cuyas claves son los lenguajes, y los valores son una lista con el número de commits totales realizados, el número de usuarios que ha hecho commits sobre ese lenguaje, y la lista de usuarios que hayan hecho los commits. Se almacenan en la tabla Languages.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/tablalanguages.png}
+  \caption{Tabla Languages}
+  \label{figura:tablalang}
+\end{figure}
+
+Una vez almacenados los distintos datos, solo queda la representación de los mismos en la aplicación web. Se presenta de la siguiente manera:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/resultadouserrepo.png}
+  \caption{Respuesta a la petición POST con la representación gráfica del análisis}
+  \label{figura:resultuserrepo}
+\end{figure}
 
 En la parte superior central, se informa al usuario del repositorio que se ha pedido analizar y el total de ficheros que tiene el repositorio.
 
 En la parte izquierda, se presenta una gráfica circular con la representación de porcentaje de cada uno de los lenguajes usados junto a una leyenda para inforar al usuario del número de porcentaje y el color que representa. La gráfica se genera a partir del diccionario con el porcentaje de uso de cada uno de los lenguajes usados en el repositorio que se ha obtenido en la recolección de datos usando la librería de python Matplotlib. Además, se presentan los lenguajes minoritarios del repositorio y el número de commits totales realizados sobre cada uno de ellos. Si se clicka en cualquiera de ellos, muestra a los usuarios que han realizado los commits y la cantidad.
 
-En la parte derecha, se muestran todos los usuarios que han contribuido, y al hacer click sobre cualquiera de ellos, muestra los commits realizados sobre cada uno de los lenguajes del repositorio.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/resultado2userrepo.png}
+  \caption{Análisis de los lenguajes minoritarios}
+  \label{figura:resultuserrepo2}
+\end{figure}
 
+En la parte derecha, se muestran todos los usuarios que han contribuido, y al hacer click sobre cualquiera de ellos, muestra los commits realizados sobre cada uno de los lenguajes del repositorio.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/resultado3userrepo.png}
+  \caption{Contribuyentes al repositorio}
+  \label{figura:resultuserrepo3}
+\end{figure}
 Por otro lado, si el repositorio que el usuario pide analizar ya tiene los datos de la última versión almacenada en la base de datos, estos se recuperan mediante una consulta en la que se pide a la tabla Repository la fila correspondiente al repositorio, y con ella se recuperan de nuevo todos los datos para representarlos en la web.
 
-\section{Endpoint /usersearch} 
+\section{Endpoint /usersearch}
 \label{sec:/usersearch}
 
 El objetivo del endpoint /usersearch es facilitar al usuario todos los repositorios públicos que pertenecen a un mismo propietario de manera que pueda localizar fácilmente los repositorios de un mismo usuario sobre los que hacer los análisis de lenguajes minoritarios. Sobre todo, está dirigido de cara a usuarios propietarios que consistan en un grupo de personas que suelen participar en los mismos proyectos.
@@ -643,17 +724,79 @@ El funcionamiento es de la siguiente manera:
 
 \begin{itemize}
   \item En caso de que llegue una petición al endpoint con método GET, se ofrece en la respuesta un formulario donde el usuario debe indicar el nombre de usuario de GitHub del cual quiera consultar los repositorios junto a un botón de envío para provocar el envío de una petición al mismo endpoint /userrepo, pero en este caso, con método POST cuyo cuerpo contiene un parámetro llamado username y su valor es lo que haya intoducido el usuario.
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=1\textwidth]{img/usersearchget.png}
+      \caption{Respuesta a la petición GET al endpoint /usersearch}
+      \label{figura:usersearch}
+    \end{figure}
   \item Cuando llega esa petición POST, el servidor procede a buscar los repositorios públicos del usuario que ha llegado en el body de la petición. Esto se hace mediante la función obtain\_user\_repos del fichero requests\_to\_github\_api.py, cuya salida es un diccionario con el nombre de todos los repositorios que posee ese usuario. Este diccionario es lo que se forma la respuesta final del endpoint.
 \end{itemize}
 
 Al finalizar, se representa de la siguiente manera en la aplicación web:
 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/usersearchpost.png}
+  \caption{Respuesta a la petición POST al endpoint /usersearch}
+  \label{figura:resultusersearch}
+\end{figure}
+
 En la parte superior se informa al usuario del nombre de usuario que ha escogido.
 
 En la parte inferior se muestran todos los repositorios públicos del usuario.
 
-Lo que hace que facilite al usuario la experiencia de analizar varios repositorios de un mismo usuario es que, al clickar en cualquiera de los repositorios que aparecen en la lista, se realiza una llamada POST al endpoint /userrepo con el nombre de usuario y el nombre del repositorio. Como se ha explicado en el punto anterior, en el endpoint /userrepo es donde se realizan los análisis. 
+Lo que hace que facilite al usuario la experiencia de analizar varios repositorios de un mismo usuario es que, al clickar en cualquiera de los repositorios que aparecen en la lista, se realiza una llamada POST al endpoint /userrepo con el nombre de usuario y el nombre del repositorio. Como se ha explicado en el punto anterior, en el endpoint /userrepo es donde se realizan los análisis.
 
+\section{Interacción con la base de datos}
+\label{sec:Interacción con la base de datos}
+
+Como se ha dicho anteriormente, es la base de datos está basada en SQLite3. Se han definido dos tablas en la base de datos:
+
+\subsection{Tabla Repository}
+\label{subsec:Tabla Repository}
+
+En la tabla Repository se almacenan los datos de los análisis de los repositorios. Se crea una fila por cada uno de ellos. Las columnas y datos que se guardan son:
+\begin{itemize}
+  \item \textbf{id}: Identificador interno del repositorio en la base de datos.
+  \item \textbf{owner\_name}: Nombre de usuario propietario del repositorio.
+  \item \textbf{repository\_name}: Nombre del repositorio.
+  \item \textbf{usernames}: Lista de los contribuyentes al repositorio.
+  \item \textbf{repo\_data}: Diccionario con los commits que ha realizado cada usuario sobre cada uno de los lenguajes.
+  \item \textbf{lg\_percent}: Diccionario con los porcentajes de uso de los lenguajes.
+  \item \textbf{num\_files}: Número total de ficheros del repositorio.
+  \item \textbf{min\_languages}: Lista con los lenguajes minoritarios.
+  \item \textbf{default\_branch}: Nombre de la rama por defecto del repositorio en GitHub.
+  \item \textbf{last\_commit}: Identificador del último commit realizado antes del análisis.
+  \item \textbf{total\_commits\_on\_min\_languages}: Almacena un diccionario con el número de commits realizados sobre cada uno de los lenguajes minoritarios.
+  \item \textbf{min\_language\_experts}: Diccionario con los lenguajes minoritarios, y la cantidad que ha contribuido cada uno de los usuarios que han realizado commits sobre los mismos.
+\end{itemize}
+
+\subsection{Tabla User\_expertise}
+\label{subsec:Tabla User\_expertise}
+
+Tiene como objetivo obtener información general de todos los usuarios, de cara a saber las tecnologías que conoce cada una de las personas y de qué manera ha participado en cada uno de los repositorios a los que ha contribuido.En la tabla User\_expertise se almacenan todos los usuarios que han participado en alguno de los repositorios que se haya analizado. Cada fila presenta un usuario. Las columnas y datos que se guardan son:
+
+\begin{itemize}
+  \item \textbf{id}: Identificador interno del usuario en la base de datos.
+  \item \textbf{user}: Nombre de usuario.
+  \item \textbf{repositories\_contribution}: Lista de repositorios analizados en los que ese usuario ha contribuido.
+  \item \textbf{commits\_min\_languages\_per\_repo}: Diccionario con el número de commits que ha realizado sobre cada uno de los lenguajes en cada repositorio.
+\end{itemize}
+
+\subsection{Tabla Languages}
+\label{subsec:Tabla Languages}
+
+En la tabla Languages se almacenan todos los lenguajes que han formado parte de alguno de los repositorios analizados, junto la suma total de commits, la lista de usuarios que han usado ese lenguaje y el número de usuarios que lo han usado. El objetivo de la tabla es tener la información de los distintos lenguajes, saber cuales son, en general, los lenguajes minoritarios, y de qué manera se usan. Los datos se guardan de la siguiente manera:
+
+\begin{itemize}
+  \item \textbf{id}: Identificador interno del lenguaje en la base de datos.
+  \item \textbf{lan\_name}: Nombre del lenguaje.
+  \item \textbf{lan\_num\_users}: Número de usuarios totales que han realizado commits sobre ese lenguaje.
+  \item \textbf{lan\_users}: Lista de usuarios que han realizado commits sobre el lenguaje.
+  \item \textbf{lan\_num\_commits}: Número de commits totales que se han hecho sobre ese lenguaje.
+\end{itemize}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -665,10 +808,177 @@ Lo que hace que facilite al usuario la experiencia de analizar varios repositori
 \chapter{Experimentos y validación}
 \label{chap:experimentos}
 
-Este capítulo se introdujo como requisito en 2019. 
-Describe los experimentos y casos de test que tuviste que implementar para validar tus resultados. 
-Incluye también los resultados de validación que permiten afirmar que tus resultados son correctos. 
+En este capítulo se explica un ejemplo del que podría ser el uso común de la aplicación. Para ello queremos a un usuario propietario de varios repositorios, cada uno de ellos con distintos lenguajes. Probaremos con la Netflix Open Source Pltaform, cuyo usuario es netflix. Este usuario posee 230 repositorios distintos. Analizaremos en profundidad uno de ellos, mientras que para otros 9, solo veremos el análisis final en la aplicación.
 
+\section{Ejemplo de uso de la aplicación con el análisis de un repositorio}
+\label{sec:Ejemplo de uso de la aplicación con el análisis de un repositorio}
+
+Como hemos comentado en el punto anterior, nos ayudaremos de nuestra aplicación web para hacer una petición GET al endpoint /usersearch dando click en "Búsqueda por usuario".
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/paginaprincipal.png}
+  \caption{Página principal de la aplicación}
+  \label{figura:mainpage2}
+\end{figure}
+
+Tras ello aparece el formulario donde deberemos indicar el nombre de usuario de github que es propietario de los distintos repositorios que vamos a analizar. En nuestro caso de prueba, netflix.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/getusersearch.png}
+  \caption{Página que se muestra al clickar en "Búsqueda por usuario"}
+  \label{figura:getusersearch}
+\end{figure}
+
+Después de pulsar el botón de envío, se envía una petición POST al endpoint /usersearch cuyo cuerpo lleva el parámetro username, con valor netflix. El servidor procesa la petición y realiza la lógica para buscar los repositorios del usuario netflix y mostrarlos en la página. Se muestra de la siguiente manera:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/listanetflix.png}
+  \caption{Respuesta de la aplicación al buscar los repositorios del usuario netflix}
+  \label{figura:netflixresp}
+\end{figure}
+
+Para realizar el análisis, usaremos su repositorio más popular, cuyo nombre es Hystrix. Lo encontramos entre los repositorios de la lista que hemos obtenido.
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/hystrixenlista.png}
+  \caption{Repositorio Hystrix en la lista}
+  \label{figura:hystrixlist}
+\end{figure}
+
+Al hacer click, se realizará una petición POST al endpoint /userrepo, con lo que el servidor comienza el análisis del repositorio. El análisis comienza con la obtención de datos de los commits del repositorio usando la librería Perceval. El el fichero de logs, se registra que se han cogido 2354 commits realizados:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/logperceval.png}
+  \caption{Log que se genera cuando Perceval obtiene la información de un repositorio}
+  \label{figura:logperceval}
+\end{figure}
+
+Sobre estos datos, después de hacer el parseo correspondiente y las modificaciones necesarias, se obtiene un diccionario con los datos de cada uno de los usuarios que ha contribuido, los lenguajes sobre los que ha hecho esos commits, y la cantidad de los mismos.
+
+Después, se almacenan los datos en la tabla Repository para almacenar ese repositorio, ya que suponiendo que no se ha analizado anteriormente el repositorio Hystrix del usuario netflix, se debe guardar en la base de datos. Se almacena de la siguiente manera:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/HYSTRIXBBDD1.png}
+  \caption{Repositorio Hystrix en la tabla Repository}
+  \label{figura:hystrixbbdd}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/HYSTRIXBBDD2.png}
+  \caption{Repositorio Hystrix en la tabla Repository - 2} 
+  \label{figura:hystrixbbdd2}
+\end{figure}
+
+
+Además, para nuestro análisis personal final, guardaremos los datos de cada uno de los usuarios que ha participado en este repositorio, junto a las modificaciones sobre cada uno de los lenguajes y la lista de repositorios que hemos analizado en los que ha contribuido (Al ser este el primero que analizamos, solo tendrán en la lista este repositorio). Se almacenan así:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/hystrixuserexpertise.png}
+  \caption{Repositorio Hystrix en la tabla User\_expertise}
+  \label{figura:hystrixuserexpertise}
+\end{figure}
+
+Por último, se almacena en la tabla Languages cada uno de los lenguajes que forman el repositorio, la lista de usuarios de que ha realizado commits sobre ese lenguaje, el número total de usuarios que lo ha usado, y el número total de commits sobre el mismo. Queda así:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/hystrixlanguages.png}
+  \caption{Repositorio Hystrix en la tabla Languages}
+  \label{figura:hystrixlanguages}
+\end{figure}
+
+Ahora que se ha hecho la recolección y almacenaje de los datos, queda la representación gráfica para que el usuario que ha querido analizar el repositorio, pueda verlo de manera sencilla.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/analisishystrix.png}
+  \caption{Representación gráfica del análisis del repositorio Hystrix - 1}
+  \label{figura:analisishystrix1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/analisishystrix2.png}
+  \caption{Representación gráfica del análisis del repositorio Hystrix - 2}
+  \label{figura:analisishystrix2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/analisishystrix3.png}
+  \caption{Representación gráfica del análisis del repositorio Hystrix - 3}
+  \label{figura:analisishystrix3}
+\end{figure}
+
+\section{Análisis de más repositorios}
+\label{sec:Análisis de más repositorios}
+
+Para ver el análisis en más repositorios del usuario netflix, he escogido 9 repositorios. Muestro el análisis realizado de todos ellos.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/zuul.png}
+  \caption{Representación gráfica del análisis del repositorio Zuul}
+  \label{figura:analisiszuul}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/flamescope.png}
+  \caption{Representación gráfica del análisis del repositorio Flamescope}
+  \label{figura:analisisflamescope}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/chaosmonkey.png}
+  \caption{Representación gráfica del análisis del repositorio chaosmonkey}
+  \label{figura:analisischaosmonkey}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/eureka.png}
+  \caption{Representación gráfica del análisis del repositorio Eureka}
+  \label{figura:analisiseureka}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/fenzo.png}
+  \caption{Representación gráfica del análisis del repositorio Fenzo}
+  \label{figura:analisisfenzo}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/edda.png}
+  \caption{Representación gráfica del análisis del repositorio Edda}
+  \label{figura:analisisedda}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/lipstick.png}
+  \caption{Representación gráfica del análisis del repositorio Lipstick}
+  \label{figura:analisislipstick}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/mantis.png}
+  \caption{Representación gráfica del análisis del repositorio Mantis}
+  \label{figura:analisismantis}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/spectator.png}
+  \caption{Representación gráfica del análisis del repositorio spectator}
+  \label{figura:analisisspectator}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -679,67 +989,190 @@ Incluye también los resultados de validación que permiten afirmar que tus resu
 \chapter{Resultados}
 \label{chap:resultados}
 
-En este capítulo se incluyen los resultados de tu trabajo fin de grado.
+Se ha realizado el análisis de 200 repositorios, con lo podemos obtener unos resultados representativos con bastantes lenguajes, usuarios y contribuyentes distintos.
 
-Si es una herramienta de análisis lo que has realizado, aquí puedes poner ejemplos de haberla utilizado para que se vea su utilidad.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/tablarepo1.png}
+  \caption{Estado de la tabla Repository después del análisis de 200 repositorios}
+  \label{figura:repoafter1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/tablarepo3.png}
+  \caption{Estado de la tabla Repository después del análisis de 200 repositorios - 2}
+  \label{figura:repoafter2}
+\end{figure}
+
+En total, se han registrado en la base de datos 92.816 usuarios que hayan contribuido a alguno o varios de entre los 200 repositorios que se han analizado.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/tablauserexp1.png}
+  \caption{Estado de la tabla User\_expertise después del análisis de 200 repositorios}
+  \label{figura:userexpafter1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/tablauserexp2.png}
+  \caption{Estado de la tabla User\_expertise después del análisis de 200 repositorios - 2}
+  \label{figura:userexpafter2}
+\end{figure}
+
+Y por úlitmo, en la tabla languages se han almacenado 262 lenguajes distintos.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/tablalan1.png}
+  \caption{Estado de la tabla Languages después del análisis de 200 repositorios}
+  \label{figura:lanafter1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/tablalan2.png}
+  \caption{Estado de la tabla Languages después del análisis de 200 repositorios - 2}
+  \label{figura:lanafter2}
+\end{figure}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% CONCLUSIONES %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Con estos datos, ahora podemos comprobar como es el uso de los lenguajes en los repositorios. Para ello nos haremos las siguientes preguntas:
 
-\cleardoublepage
-\chapter{Conclusiones}
-\label{chap:conclusiones}
+\begin{itemize}
+  \item \textbf{¿Cuáles son los 10 lenguajes sobre los que más usuarios han realizado commits en los distintos repositorios analizados?}
+        \begin{itemize}
+          \item Viendo la tabla Languages, y ordenando según la columna lan\_num\_users: Markdown: 46187 usuarios, Python: 22281 usuarios, XML: 14888 usuarios, JSON:13000 usuarios, JavaScript: 11092 usuarios, YAML: 10325 usuarios, Vim Help File (TXT): 5669 usuarios, C++: 5587 usuarios, Shell: 5377 usuarios, Go: 3750 usuarios.
+        \end{itemize}
+  \item \textbf{¿Cuáles son los 10 lenguajes sobre los que se han realizado más commits en total?}
+        \begin{itemize}
+          \item Viendo la tabla Languages, y ordenando según la columna lan\_num\_commits: XML: 795957, JavaScript: 703486, Python: 412025, YAML: 388705, JSON: 339749, Markdown: 330496, Go: 163826, HTML: 141931, C++: 126958, Objective-C: 97321.
+        \end{itemize}
+  \item \textbf{¿Cuáles son los 10 lenguajes que en más repositorios han sido minoritarios?}
+        \begin{itemize}
+          \item Haciendo la siguiente query contra la base de datos:
+                \begin{verbatim}
+      WITH RECURSIVE split_languages AS (
+      SELECT 
+        id,
+        TRIM(REPLACE(REPLACE(SUBSTR(min_languages, 1, 
+        INSTR(min_languages || ',', ',') - 1), '[', '')
+        , ']', '')) AS language,
+        SUBSTR(min_languages, INSTR(min_languages 
+        || ',', ',') + 1) AS remaining_languages
+        FROM repository
+        WHERE min_languages IS NOT NULL
+        UNION ALL
+
+        SELECT 
+            id,
+            TRIM(REPLACE(REPLACE(SUBSTR(remaining_languages
+            , 1, INSTR(remaining_languages || ',', ',')
+             - 1), '[', ''), ']', '')),
+            SUBSTR(remaining_languages, 
+            INSTR(remaining_languages || ',', ',') + 1)
+        FROM split_languages
+        WHERE remaining_languages != ''
+        )
+        SELECT 
+            language, 
+            COUNT(*) AS frequency
+        FROM split_languages
+        WHERE language != ''
+        GROUP BY language
+        ORDER BY frequency DESC;
+      \end{verbatim}
+                Obtenemos que los 10 lenguajes que más se han repetido como minoritarios han sido: YAML: 130 veces, Vim Help File (TXT): 115 veces, Shell: 96 veces, CSS: 92 veces, SVG: 88 veces, JSON: 85 veces, HTML: 85 veces, Markdown: 70 veces, Javascript: 63 veces, TOML: 58 veces.
+        \end{itemize}
+  \item \textbf{¿Si nos fijamos en los lenguajes minoritarios que más se repiten en los repositorios, cuál es la tendencia de uso por parte de los contribuyentes?}
+        \begin{itemize}
+          \item Ayudandonos de la tabla Languages, vamos a ver si estos lenguajes se han usado por muchos usuarios, y la cantidad de commits que estos han realizado.
+                \begin{itemize}
+                  \item YAML: Entre 10325 usuarios se han realizado 388705 commits.
+                  \item VIM: Entre 5669 usuarios se han realizado 37867 commits.
+                  \item Shell: Entre 5377 usuarios se han realizado 24034 commits.
+                  \item CSS: Entre 2334 usuarios se han realizado 26619 commits.
+                  \item SVG: Entre 1179 usuarios se han realizado 83344 commits.
+                  \item JSON: Entre 13000 usuarios se han realizado 339749 commits.
+                  \item HTML: Entre 3213 usuarios se han realizado 141931 commits.
+                  \item Markdown: Entre 46187 usuarios se han realizado 330496 commits.
+                  \item JavaScript: Entre 11902 usuarios se han realizado 703486 commits.
+                  \item TOML: Entre 2271 usuarios se han realizado 10026 commits.
+                \end{itemize}
+        \end{itemize}
+  \item \textbf{¿Cómo es el uso de los lengajes minoritarios dentro de los repositorios? ¿Se centralizan en usuarios concretos? ¿Qué tipo de lenguajes suelen ser?}
+        \begin{itemize}
+          \item En la mayoría de los repositorios que se han analizado, la tendencia que se sigue es que, si bien no se suelen centralizar en uno o en pocos usuarios, si que suele ocurrir que uno o dos usuarios destacan más en el uso de alguno de los lenguajes. Por ejemplo, con el repositorio prettier/prettier, más de 20 personas han realizado commits sobre ficheros de lenguaje YAML, pero la mayoría de ellos han realizado menos de 3 commits, mientras que la persona con más commits ha realizado 1081 commits, y el segundo, 351 commits. También tiene que ver con el número de commits que se realiza sobre cada uno de los lenguajes, ya que la tendencia que he comentado se suele dar sobre todo para aquellos lenguajes sobre los que se han realizado muchos commits, mientras que para los lenguajes con menos contribuciones, están más repartidos y no hay ningún usuario que destaque demasiado por encima del resto.
+
+                Los lenguajes que suelen ser minoritarios en la mayoría de repositorios se utilizan para realizar configuraciones o despliegues de aplicaciones y que suelen ser flexibles de manera que la mayoría de lenguajes de programación pueden usar. Por ello son tan importantes a pesar de que no sean los lenguajes con un mayor uso dentro de los repositorios, ya que suelen ser clave para el funcionamiento de una aplicación, un programa, etc.
+        \end{itemize}
+    \end{itemize}
+
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % CONCLUSIONES %
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        \cleardoublepage
+        \chapter{Conclusiones}
+        \label{chap:conclusiones}
 
 
-\section{Consecución de objetivos}
-\label{sec:consecucion-objetivos}
+        \section{Consecución de objetivos}
+        \label{sec:consecucion-objetivos}
 
-Esta sección es la sección espejo de las dos primeras del capítulo de objetivos, donde se planteaba el objetivo general y se elaboraban los específicos.
+        El objetivo general se ha conseguido a base de la cumplimentación de los objetivos específicos que se pusieron al comenzar el proyecto.
 
-Es aquí donde hay que debatir qué se ha conseguido y qué no. 
-Cuando algo no se ha conseguido, se ha de justificar, en términos de qué problemas se han encontrado y qué medidas se han tomado para mitigar esos problemas.
+        \begin {itemize}
+  \item \textbf {Obtención de datos de los repositorios de plataformas Git}: Este objetivo se ha logrado cumplir gracias, sobre todo, al uso de la librería Perceval, que ha permitido la recolección de los datos de los commits de los distintos repositorios y en la cual se basa la aplicación para hacer los análisis. Además, también, mediante llamadas a la API de GitHub se obtienen datos adicionales sobre los repositorios como el número de ficheros del repositorio o los lenguajes usados en él.
+  \item \textbf{Tratamiento de los datos de los repositorios}: Los datos que recolectamos tanto con Perceval como con nuestras propias llamadas a la API de Github se reciben en formato JSON. La aplicación adapta las respuestas a los  formatos que necesitamos para realizar los análisis y guardarlos en la base de datos según estaba definido.
+  \item \textbf{Creación de una aplicación web para permitir un uso más fácil del aplicativo}: Mediante el uso del módulo de Flask de Python, se ha podido crear la aplicación web, formada sobre todo con HTML, CSS, JavaScript y usando la librería Bootstrap. Se ha conseguido que la experiencia del usuario que entra a la web sea más sencilla para el uso de la aplicación y que pueda ver gráficamente los análisis de los repositorios que escoja.
+  \item \textbf{Creación de una base de datos donde almacenar los análisis de los repositorios}: Se ha conseguido complir este objetivo gracias a la base de datos SQLite3 que se ha creado. Además, logramos almacenar todos los datos que buscábamos para realizar los análisis finales. Quizá este sea el punto que, si bien se ha conseguido, se podría mejorar ya que la clasificación de las diferentes tablas y sus propias columnas que se ha hecho durante el proyecto, es mejorable de cara a poder sacar los datos y poder analizarlos de una manera más fácil a posteriori.
+\end{itemize}
 
-Y si has llegado hasta aquí, siempre es bueno pasarle el corrector ortográfico, que las erratas quedan fatal en la memoria final.
-Para eso, en Linux tenemos aspell, que se ejecuta de la siguiente manera desde la línea de \emph{shell}:
-
-\begin{verbatim}
-  aspell --lang=es_ES -c memoria.tex
-\end{verbatim}
+Debido a la consecución de todos estos objetivos, damos por cumplido el objetivo general del proyecto mediante nuestro programa en Python que procesa los datos obtenidos de los repositorios y que analiza el proyecto, junto a la aplicación web que permite visualizar fácilmente el análisis realizado.
 
 \section{Aplicación de lo aprendido}
 \label{sec:aplicacion}
 
-Aquí viene lo que has aprendido durante el Grado/Máster y que has aplicado en el TFG/TFM.
-Una buena idea es poner las asignaturas más relacionadas y comentar en un párrafo los conocimientos y habilidades puestos en práctica.
+Para la realización de este trabajo de fin de grado he aplicado conocimientos adquiridos a lo largo de todas la carrera universitaria, sobre todo de aquellas asignaturas dirigidas a la programación.
 
 \begin{enumerate}
-  \item a
-  \item b
+  \item \textbf{Informática 1}: Con esta asignatura comencé a conocer los fundamentos de la programación. Si bien el lenguaje que practiqué fue Picky, me ayudó a saber los conceptos más básicos.
+  \item \textbf{Informática 2}: En esta asignatura, ya más centrada en programación más avanzada, pude ampliar mi conocimiento del lenguaje Python usado en este proyecto.
+  \item \textbf{Protocolos para la Transmisión}: Fue la primera asignatura en la que comencé a conocer Python y a aplicarlo. Probablemente, sea la que más me ha ayudado con este proyecto, ya que también hice una aplicación cliente-servidor, por lo que ya algo de experiencia.
+  \item \textbf{Construcción de Servicios y Aplicaciones Audiovisuales en Internet}: En esta asignatura comencé a tratar como funciona el front-end de una aplicación web, practicando con HTML, CSS y JavaScript, con lo que se ha construido el cliente de mi web.
+  \item \textbf{Laboratorio de Tecnologías Audiovisuales en la web}: En esta asignatura conocí como funciona el back-end de una plataforma web, con lo que a la hora de hacer el servidor, pude aplicar algunos de los conceptos que aprendí.
 \end{enumerate}
 
 
 \section{Lecciones aprendidas}
 \label{sec:lecciones_aprendidas}
 
-Aquí viene lo que has aprendido en el Trabajo Fin de Grado/Máster.
+Durante la realización de este trabajo de fin de grado he aprendido:
 
 \begin{enumerate}
-  \item Aquí viene uno.
-  \item Aquí viene otro.
+  \item Uso de la librería Perceval para la obtención de datos de repositorios Git.
+  \item Uso de la librería Flask apra la creación de la aplicación web.
+  \item Uso de distintas librerías como matplotlib para la representación del análisis de los repositorios
+  \item Creación de una base de datos SQLite3.
+  \item Manejo de una base de datos y la interacción con la aplicación Python.
+  \item El uso de distintos lenguajes en repositorios de GitHub.
+  \item Organización de proyectos en cuanto a tiempo y esfuerzo.
 \end{enumerate}
 
 
 \section{Trabajos futuros}
 \label{sec:trabajos_futuros}
 
-Ningún proyecto ni software se termina, así que aquí vienen ideas y funcionalidades que estaría bien tener implementadas en el futuro.
+Tras finalizar el proyecto y hacer un análisis general de lo que se puede mejorar, cambiar o añadir a la aplicación, tengo las siguientes propuestas a futuro:
 
-Es un apartado que sirve para dar ideas de cara a futuros TFGs/TFMs.
-
-
+\begin{itemize}
+\item \textbf{Mejorar la clasificación de la base de datos}: Como he comentado en un punto anterior, este es el principal punto de mejora que le encuentro a la aplicación. Me ha sido bastante complicado hacer el análisis final del uso de los lenguajes minoritarios en los repositorios debido a como he almacenado los datos en la tabla Repository. Creo que sería mejor almacenar los datos en más columnas, y sin usar formatos JSON o listas.
+\item \textbf{Añadir en la aplicación páginas que permitan ver los repositorios que ya están en la base de datos}: Creo que sería útil para el usuario que entre a la página, que pueda acceder al análisis de los repositorios sin tener que buscarlos antes, es decir, una página que muestre una tabla con todos los repositorios que están en la base de datos y los pueda ver fácilmente.
+\item \textbf{Mejorar los tiempos de recolección de datos}: Perceval quizá es un poco lento a la hora de generar los ficheros JSON con los datos en repositorios que tienen una gran cantidad de commits realizados. Puede que haya una mejor alternativa para mejorar la eficiencia de este punto.
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % APÉNDICE(S) %
