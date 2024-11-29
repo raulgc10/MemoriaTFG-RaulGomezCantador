@@ -68,7 +68,7 @@
     \vspace{1cm}
 
     \LARGE
-    TITULACIÓN EN MAYÚSCULAS
+    GRADO EN INGENIERÍA EN SISTEMAS AUDIOVISUALES Y MULTIMEDIA
 
     \vspace{1cm}
     \LARGE
@@ -83,7 +83,7 @@
 
     \large
     Autor : \theauthor \\
-    Tutor : Dr. Gregorio Robles Martínez/a\\
+    Tutor : Dr. Gregorio Robles Martínez\\
     \vspace{1cm}
 
     \large
@@ -116,12 +116,12 @@
   \vspace{0.8cm}
   \large
   \textbf{Autor :} \theauthor \\
-  \textbf{Tutor :} Dr. Gregorio Robles Martínez/a
+  \textbf{Tutor :} Dr. Gregorio Robles Martínez
 
 \end{center}
 
 \vspace{0.8cm}
-La defensa del presente Proyecto Fin de Carrera se realizó el día \qquad$\;\,$ de \qquad\qquad\qquad\qquad \newline de 2024, siendo calificada por el siguiente tribunal:
+La defensa del presente Proyecto Fin de Carrera se realizó el día \qquad$\;\,$ de diciembre \newline de 2024, siendo calificada por el siguiente tribunal:
 
 
 \vspace{0.5cm}
@@ -140,7 +140,7 @@ y habiendo obtenido la siguiente \textbf{Calificación:}
 
 \vspace{1cm}
 \begin{flushright}
-  Fuenlabrada, a \qquad$\;\,$ de \qquad\qquad\qquad\qquad de 202X
+  Fuenlabrada, a \qquad$\;\,$ de diciembre de 2024
 \end{flushright}
 
 \vspace{1cm}
@@ -164,7 +164,7 @@ Este documento se distribuye bajo la licencia ``Atribución-CompartirIgual 4.0 I
 \pagenumbering{Roman} % para comenzar la numeracion de paginas en numeros romanos
 \begin{flushright}
   \textit{Dedicado a \\
-    mi familia / mi abuelo / mi abuela}
+    mi familia.}
 \end{flushright}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -174,8 +174,11 @@ Este documento se distribuye bajo la licencia ``Atribución-CompartirIgual 4.0 I
 %\addcontentsline{toc}{chapter}{Agradecimientos} % si queremos que aparezca en el índice
 \markboth{AGRADECIMIENTOS}{AGRADECIMIENTOS} % encabezado 
 
-Aquí vienen los agradecimientos\ldots Aunque está bien acordarse de la pareja, no hay que olvidarse de dar las gracias a tu madre, que aunque a veces no lo parezca disfrutará tanto de tus logros como tú\ldots
-Además, la pareja quizás no sea para siempre, pero tu madre sí.
+Con este proyecto doy prácticamente el carpetazo final a mi paso por la universidad. Han sido seis años que por algunas épocas se han hecho muy cuesta arriba.  Sin embargo, me quedo con todos aquellos momentos buenos que he pasado, que son infinitamente mayores que los malos. Quiero agradecer a todas las personas que me han ayudado a lo largo de todo este proceso y en especial a los amigos que he hecho durante el camino.
+
+También, quiero agradecer a Gregorio, mi tutor, por ser tan flexible conmigo. Aunque por mi parte no haya sido muy organizado durante la realización del proyecto y me haya faltado constancia, siempre que he recurrido a ti para hacer cualquier tutoría, has sacado algún tiempo para ayudarme, incluso siendo algunas de ellas bastante tarde. ¡Muchas gracias, Gregorio!
+
+Por último, quiero agradecer sobre todo, a mi familia. Siempre que los necesito están ahí y me apoyan en todo lo que hago. Gracias por decirme aquello que necesito oír, y no lo que quiero, siempre.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Resumen
@@ -184,17 +187,11 @@ Además, la pareja quizás no sea para siempre, pero tu madre sí.
 %\addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
 \markboth{RESUMEN}{RESUMEN} % encabezado
 
-Aquí viene un resumen del proyecto.
-Ha de constar de tres o cuatro párrafos, donde se presente de manera clara y concisa de qué va el proyecto.
-Han de quedar respondidas las siguientes preguntas:
+Este proyecto consiste en la creación de una herramienta que permite realizar el análisis de uso de los lenguajes minoritarios en repositorios públicos de GitHub. Entendemos los lenguajes minoritarios por aquellos que representan un porcentaje pequeño de uso en un repositorio y que es usado por un grupo pequeño de usuarios. El objetivo que tiene es que el usuario que utilice esta herramienta pueda ver cómo es el uso de estos lenguajes minoritarios en el repositorio que escoja, los usuarios que han contribuido y en qué cantidad.
 
-\begin{itemize}
-  \item ¿De qué va este proyecto? ¿Cuál es su objetivo principal?
-  \item ¿Cómo se ha realizado? ¿Qué tecnologías están involucradas?
-  \item ¿En qué contexto se ha realizado el proyecto? ¿Es un proyecto dentro de un marco general?
-\end{itemize}
+Para ello se ha realizado un programa en Python que se encarga de producir estos análisis recolectando los datos de la participación histórica de los repositorios a través de los commits mediante el uso de la librería Perceval y otros datos como el número de ficheros o las tecnología usadas en los repositorios. Además, para hacer la representación de los análisis se ha realizado también una aplicación web cliente-servidor para que la visualización de estos sea mucho más cómoda y sencilla de usar para un usuario cualquiera. Esta aplicación se ha construido con HTML, CSS y JavaScript con uso de la librería Bootstrap y con la librería Flask para la gestión del servidor. Además se ha creado una base de datos SQLite3 donde se almacenan los datos de los repositorios analizados, la información de uso de todos los lenguajes y la información de todos los usuarios que hayan participado en alguno de los proyectos.
 
-Lo mejor es escribir el resumen al final.
+Puede ser un proyecto útil para desarrolladores que quieran conocer cómo funcionan los lenguajes con menor uso en repositorios, sobre todo, dirigido a aquellos repositorios muy grandes y con bastante tiempo detrás, donde es difícil obtener esta información. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Resumen en inglés
@@ -203,9 +200,11 @@ Lo mejor es escribir el resumen al final.
 %\addcontentsline{toc}{chapter}{Summary} % si queremos que aparezca en el índice
 \markboth{SUMMARY}{SUMMARY} % encabezado
 
-Here comes a translation of the ``Resumen'' into English.
-Please, double check it for correct grammar and spelling.
-As it is the translation of the ``Resumen'', which is supposed to be written at the end, this as well should be filled out just before submitting.
+This project consists of the creation of a tool that allows the analysis of the use of minority languages in public repositories on GitHub. We understand minority languages as those that represent a small percentage of use in a repository and that are used by a small group of users. The aim is that the user who uses this tool can see how these minority languages are used in the repository he/she chooses, the users who have contributed and in what quantity.
+
+To do this, a Python program has been created that is responsible for producing these analyses by collecting data on the historical participation of the repositories through commits using the Perceval library and other data such as the total number of files or the technologies used in the repositories. In addition, a client-server web application has also been developed to represent the analyses so the visualisation of these analyses is much more comfortable and easy to use for any user. This application has been built with HTML, CSS and JavaScript using the Bootstrap library and the Flask library for server management. Also, a SQLite3 database has been created where the data of the analysed repositories, the usage information of all the languages and the information of all the users who have participated in any of the projects stored.
+
+It can be a useful project for developers who want to know how the lesser-used languages work in repositories, especially for very large repositories with a long time behind them, where it is difficult to obtain this information. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -249,11 +248,11 @@ As it is the translation of the ``Resumen'', which is supposed to be written at 
 
 % En mayo de 2023 me apunté a un curso de innovación docente donde nos pidieron hacer un podcast con temática docente. Aproveché entonces para hacer un podcast de unos 30 minutos donde en los primeros quince minutos introducía LaTeX y la memoria, y en los segundos hacía hincapién en aquellas cosas que más os cuestan utilizar en la memoria: las figuras, las tablas y las citas. Podéis escuchar el podcast en Internet\footnote{\url{https://podcasters.spotify.com/pod/show/gregorio-robles9/episodes/Tu-memoria-de-Trabajo-Fin-de-Grado-o-de-Mster-en-LaTeX-e23hucr/a-a58kp2}}.
 
-Durante los últimos años, a través de plataformas de desarrollo de software como GitHub o GitLab, una gran cantidad de desarrolladores contribuyen diariamente a proyectos de software libre. Por supuesto, al haber tanta variedad de proyectos y desarrolladores, existe una gran diversidad de lenguajes de programación que se usan en los distintos repositorios de cada uno de los proyectos. Este trabajo de fin de grado tiene como objetivo realizar el análisis del uso de esos lenguajes de programación, dividiéndolos en dos clases: lenguajes mayoritarios y lenguajes minoritarios, si bien, nos centraremos en mayor medida en estos últimos. Estos lenguajes minoritarios, si bien no son los más usados por la gran mayoría de desarrolladores, pueden llegar a cumplir roles específicos y críticos para el funcionamiento de una aplicación o proyecto.
+Durante los últimos años, a través de plataformas de desarrollo de software como GitHub o GitLab, una gran cantidad de desarrolladores contribuyen diariamente a proyectos de software libre. Por supuesto, al haber tanta variedad de proyectos y desarrolladores, existe una gran diversidad de lenguajes de programación que se usan en los distintos repositorios de cada uno de los proyectos. Este trabajo de fin de grado tiene como objetivo realizar el análisis del uso de esos lenguajes de programación, dividiéndolos en dos clases: lenguajes mayoritarios y lenguajes minoritarios, si bien, nos centraremos en mayor medida en estos últimos. Definimos estos lenguajes minoritarios como aquellos que representan menos de un 5\% dentro de un repositorio donde se almacene el código de un programa, y que es usado por un número pequeño de contribuyentes. Estos lenguajes, si bien no son los más usados por la gran mayoría de desarrolladores, pueden llegar a cumplir roles específicos y críticos para el funcionamiento de una aplicación o proyecto.
 
-Para llevar a cabo este análisis, se ha desarrollado una aplicación en Python cuyo objetivo es la recopilación y representación de datos provenientes de los repositorios de distintos proyectos para comprobar como es el uso de estos lenguajes minoritarios. Con todos estos datos, se ha creado una base de datos SQL que contiene la información de uso de los distintos lenguajes por usuario y repositorio de todos los proyectos que se han analizado a lo largo de la ejecución del trabajo de fin de grado.
+Para llevar a cabo este análisis, se ha desarrollado una aplicación en Python cuyo objetivo es la recopilación y representación de datos provenientes de los repositorios de distintos proyectos para comprobar cómo es el uso de estos lenguajes minoritarios. Con todos estos datos, se ha creado una base de datos SQL que contiene la información de uso de los distintos lenguajes por usuario y repositorio de todos los proyectos que se han analizado a lo largo de la ejecución del trabajo de fin de grado.
 
-Además, este proyecto cuenta con una aplicación web para poder facilitar la recolección y representación de los datos de manera mucho más fácil y cómoda, y que en el futuro podría servir para seguir recopilando datos de repositorios distintos a los que se han usado para realizar este análisis.
+Además, este proyecto cuenta con una aplicación web para poder facilitar la recolección y representación de los datos de manera mucho más fácil y cómoda. Esta herramienta se puede utilizar para hacer el análisis del uso de los lenguajes minoritarios dentro de un repositorio para ver como se han gestionado estos a lo largo del tiempo. Además, permite conocer a los usuarios que han participado a los repositorios y con ello, poder hacerse una idea de los conocimientos de cada uno de ellos. Además. puesto que existe una base de datos que va almacenando todos estos análisis, en el futuro podría servir para seguir recopilando datos de repositorios distintos a los que se han usado para realizar este análisis y continuar investigando más adelante. 
 
 \section{Estructura de la memoria}
 \label{sec:estructura}
@@ -270,15 +269,13 @@ La memoria se estructura de la siguiente manera:
 
   \item \textbf{Capítulo 4: Diseño e implementación.} Se realiza una explicación sobre el diseño en conjunto de todo el proyecto, y el por qué de como se ha implementado.
 
-  \item \textbf{Capítulo 5: Resultados.} Se realiza el análisis final de los resultados obtenidos.
+  \item \textbf{Capítulo 5: Experimentos y validación.} Se explica un caso de uso de la aplicación para ver las funcionalidades y comprobar que son correctas.
 
-  \item \textbf{Capítulo 6: Conclusiones.} Incluye la conclusión final del proyecto.
+  \item \textbf{Capítulo 6: Resultados.} Se realiza el análisis final de los resultados obtenidos tras analizar 200 repositorios.
+
+  \item \textbf{Capítulo 7: Conclusiones.} Incluye la conclusión final del proyecto.
 
 \end{itemize}
-
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -308,7 +305,7 @@ Se han seguido los siguientes objetivos específicos para llegar a cumplir el ob
   \item \textbf{Obtención de datos de los repositorios de plataformas Git}
         \begin{itemize}
   \item Búsqueda de una herramienta para obtener los datos usando Python
-  \item Investigación del módulo de python Perceval usado para la obtención de commits realizados en los respositorios
+  \item Investigación del módulo de python Perceval usado para la obtención de commits realizados en los repositorios
   \item Investigación de llamadas a la API de GitHub para obtener información adicional
   \item Guardado de datos en formato JSON para su posterior tratamiento
 \end{itemize}
@@ -342,7 +339,7 @@ Se han seguido los siguientes objetivos específicos para llegar a cumplir el ob
 \section{Planificación temporal}
 \label{sec:planificacion-temporal}
 
-El total de duración del proyecto ha sido de aproximadamente 1 año. Contacté por primera vez con Gregorio; mi tutor, en octubre del año 2023, con la intención de comenzar con este proyecto, dando inicio desde noviembre y terminándolo a lo largo del anterior curso académico 2023/2024. Sin embargo, no ha sido hasta este presente curso 2024/2025 en el que he podido finalizar el trabajo, sobre todo debido a algunos parones que hice durante algunos meses del curso anterior y a que, principalmente, se ha hecho en mi tiempo libre y durante los fines de semana. En la siguiente figura, se encuentra la planificación general final que ha seguido el proyecto a lo largo de todo este año en un diagrama de Gantt:
+El total de duración del proyecto ha sido de aproximadamente un año. Contacté por primera vez con Gregorio, mi tutor, en octubre del año 2023, con la intención de comenzar con este proyecto, dando inicio desde noviembre y terminándolo a lo largo del anterior curso académico 2023/2024. Sin embargo, no ha sido hasta este presente curso 2024/2025 en el que he podido finalizar el trabajo, sobre todo debido a algunos parones que hice durante algunos meses del curso anterior y a que, principalmente, se ha hecho en mi tiempo libre y durante los fines de semana. En la siguiente figura, se encuentra la planificación general final que ha seguido el proyecto a lo largo de todo este año en un diagrama de Gantt:
 
 \begin{figure}[H]
   \centering
@@ -382,7 +379,7 @@ En mi caso, lo he escogido en este proyecto ya que, además de ser el lenguaje q
 
 \section{Perceval}
 \label{sec:Perceval}
-Perceval es la librería de Python que me recomendó mi tutor para poder conseguir la mayoría de información necesaria para realizar los análisis de este proyecto. Consiste en un módulo que consigue recuperar datos relacionados con el desarrollo software de varias posibles fuentes como pueden ser Confluence, Bugzilla o Slack, aunque en este trabajo solo se ha usado para obtener datos de repositorios Git.
+Perceval~\cite{perceval:_perceval} es la librería de Python que me recomendó mi tutor para poder conseguir la mayoría de información necesaria para realizar los análisis de este proyecto. Consiste en un módulo que consigue recuperar datos relacionados con el desarrollo software de varias posibles fuentes como pueden ser Confluence, Bugzilla o Slack, aunque en este trabajo solo se ha usado para obtener datos de repositorios Git.
 
 Del modo que se ha usado Perceval en mi caso, ha sido para poder recuperar los commits de los distintos repositorios en formato JSON, lo que me ha permitido ver el historial de cambios de los repositorios y las personas que han contribuido a los mismos para realizar los análisis.
 \section{Flask}
@@ -427,7 +424,7 @@ Todos los repositorios analizados en este proyecto forman parte de la propia pla
 \section{SQLAlchemy}
 \label{sec:SQLAlchemy}
 
-SQLAlchemy es una librería de Python usada para la interacción con una gran variedad de bases de datos. Permite crear modelos de datos y consultas de una manera sencilla y cercana a las clases de Python.
+SQLAlchemy~\cite{myerscopeland:_essentialsqlalchemy} es una librería de Python usada para la interacción con una gran variedad de bases de datos. Permite crear modelos de datos y consultas de una manera sencilla y cercana a las clases de Python.
 
 Es un ORM (Object Relational Mapper), por lo que permite el mapeo de tablas de las bases de datos sin tener que escribir las consultas, sino que mediante los objetos de Python, podemos hacer esta función.
 
@@ -436,7 +433,7 @@ Lo he usado en mi implementación con la base de datos SQLite que se ha hecho y 
 \section{SQLite}
 \label{sec:SQLite}
 
-SQLite es una base de datos integrada de código abierto. Su principal característica y diferencia con la mayoría de bases de datos SQL es que no tiene un proceso independiente al de la aplicación, sino que se encuentra contenida en la propia aplicación.
+SQLite~\cite{sqlite:_sqlite} es una base de datos integrada de código abierto. Su principal característica y diferencia con la mayoría de bases de datos SQL es que no tiene un proceso independiente al de la aplicación, sino que se encuentra contenida en la propia aplicación.
 
 Lo he usado por la facilidad que ofrece para la configuración de la propia base de datos, ya que, al estar dentro de la propia aplicación, no necesita configuración de red, lo que facilita bastante el uso de bases de datos para personas como yo, que no son expertos en ello.
 
@@ -457,7 +454,7 @@ En este proyecto se ha utilizado CSS en todas las páginas para dar el estilo vi
 \section{Bootstrap}
 \label{sec:Bootstrap}
 
-Bootstrap es un proyecto de código abierto que consiste en un framework de front-end que facilita el desarrollo de aplicaciones mediante un conjunto de herramientas y componentes pre-hechos como botones o formularios que permiten la personalización del diseño de una web.
+Bootstrap~\cite{bootstrap:_bootstrap} es un proyecto de código abierto que consiste en un framework de front-end que facilita el desarrollo de aplicaciones mediante un conjunto de herramientas y componentes pre-hechos como botones o formularios que permiten la personalización del diseño de una web.
 
 Se ha usado Bootstrap en el diseño de todas las páginas incluyendo botones, formularios, o el encabezado de la página web.
 
@@ -471,14 +468,12 @@ Se ha usado Bootstrap en el diseño de todas las páginas incluyendo botones, fo
 \chapter{Diseño e implementación}
 \label{sec:diseno}
 
-En este apartado de la memoria se detalla el funcionamiento de la aplicación y todos sus componentes.
-
-
+En este apartado de la memoria se detalla el diseño de la aplicación y de todos sus componentes.
 
 \section{Arquitectura general}
 \label{sec:arquitectura}
 
-Este proyecto sigue un modelo cliente-servidor. El cliente en este caso, para el uso que está pensado, sería la aplicación web que se ejecuta desde el navegador y que permite realizar las peticiones de una manera más cómoda, accesible y sencilla al servidor, aunque obviamente, se podrían hacer estas peticiones "a mano" sin utilizar la aplicación web, y seguiría siendo el cliente. El servidor mientras tanto, espera a atender las peticiones que se envían a los endpoints que tiene definidos para finalmente dar la respuesta a los clientes.
+Este proyecto sigue un modelo cliente-servidor. El cliente en este caso, para el uso que está pensado, sería la aplicación web que se ejecuta desde el navegador y que permite realizar las peticiones de una manera más cómoda, accesible y sencilla al servidor, aunque obviamente, se podrían hacer estas peticiones a mano sin utilizar la aplicación web, y seguiría siendo el cliente. El servidor, mientras tanto, espera a atender las peticiones que se envían a los endpoints que tiene definidos para finalmente dar la respuesta a los clientes.
 
 
 Aunque en puntos posteriores entraremos más a fondo en cada uno de elementos de la aplicación, el flujo que sigue, a modo general es el siguiente:
@@ -490,7 +485,7 @@ Aunque en puntos posteriores entraremos más a fondo en cada uno de elementos de
   \label{figura:arqgeneral}
 \end{figure}
 
-Un cliente cualquiera accede a la página web del proyecto, a la que he llamado OSSAnalyzer (viene de Open Source Software Analyzer), y haciendo click en el botón "Búsqueda de un repositorio concreto" en el encabezado de la página principal, provoca que el navegador lanze una petición GET al endpoint principal de la aplicación (/userrepo). El servidor, después, ofrece en la respuesta un formulario donde el usuario deberá introducir el nombre del repositorio y el nombre del propietario del repositorio, con el objetivo de hacer una petición POST al servidor, también al endpoint /userrepo. Al llamar a este endpoint con estos datos y con el método POST, el servidor realiza toda la parte interna de recolección de datos usando Perceval, realiza también el análisis de los datos obtenidos y además, también realiza la representación de este análisis en la propia aplicación web. No hay que olvidar también la base de datos que forma parte de la aplicación; ya que los datos de los repositorios que se vayan a analizar, es decir, que se vayan a introducir en el endpoint /userrepo se van a guardar en la base de datos para tenerlos almacenados.
+Un cliente cualquiera accede a la página web del proyecto, a la que he llamado OSSAnalyzer (viene de Open Source Software Analyzer), y haciendo click en el botón ``Búsqueda de un repositorio concreto'' en el encabezado de la página principal, provoca que el navegador lance una petición GET al endpoint principal de la aplicación (/userrepo). El servidor, después, ofrece en la respuesta un formulario donde el usuario deberá introducir el nombre del repositorio y el nombre del propietario del repositorio, con el objetivo de hacer una petición POST al servidor, también al endpoint /userrepo. Al llamar a este endpoint con estos datos y con el método POST, el servidor realiza toda la parte interna de recolección de datos usando Perceval, realiza también el análisis de los datos obtenidos y además, también realiza la representación de este análisis en la propia aplicación web. No hay que olvidar también la base de datos que forma parte de la aplicación; ya que los datos de los repositorios que se vayan a analizar, es decir, que se vayan a introducir en el endpoint /userrepo se van a guardar en la base de datos para tenerlos almacenados.
 
 Además, está disponible también el endpoint /usersearch, que facilita la búsqueda de los repositorios perteneciente a un usuario que el cliente debe escoger. Esto se hace de manera que con una petición GET, el servidor devuelve al cliente un formulario que debe rellenar con el usuario propietario, y al enviarlo, se realiza una petición POST, con la que el servidor, después de procesarla, le ofrece al cliente la lista de repositorios que posee ese usuario para que posteriormente pueda analizarlos.
 
@@ -695,9 +690,9 @@ Una vez almacenados los distintos datos, solo queda la representación de los mi
   \label{figura:resultuserrepo}
 \end{figure}
 
-En la parte superior central, se informa al usuario del repositorio que se ha pedido analizar y el total de ficheros que tiene el repositorio.
+Se informa al usuario del repositorio que se ha pedido analizar y el total de ficheros que tiene el repositorio.
 
-En la parte izquierda, se presenta una gráfica circular con la representación de porcentaje de cada uno de los lenguajes usados junto a una leyenda para inforar al usuario del número de porcentaje y el color que representa. La gráfica se genera a partir del diccionario con el porcentaje de uso de cada uno de los lenguajes usados en el repositorio que se ha obtenido en la recolección de datos usando la librería de python Matplotlib. Además, se presentan los lenguajes minoritarios del repositorio y el número de commits totales realizados sobre cada uno de ellos. Si se clicka en cualquiera de ellos, muestra a los usuarios que han realizado los commits y la cantidad.
+Se presenta una gráfica circular con la representación de porcentaje de cada uno de los lenguajes usados junto a una leyenda para inforar al usuario del número de porcentaje y el color que representa. La gráfica se genera a partir del diccionario con el porcentaje de uso de cada uno de los lenguajes usados en el repositorio que se ha obtenido en la recolección de datos usando la librería Matplotlib. Además, se presentan los lenguajes minoritarios del repositorio y el número de commits totales realizados sobre cada uno de ellos. Si se pulsa en cualquiera de ellos, muestra a los usuarios que han realizado los commits y la cantidad.
 
 \begin{figure}[H]
   \centering
@@ -706,7 +701,7 @@ En la parte izquierda, se presenta una gráfica circular con la representación 
   \label{figura:resultuserrepo2}
 \end{figure}
 
-En la parte derecha, se muestran todos los usuarios que han contribuido, y al hacer click sobre cualquiera de ellos, muestra los commits realizados sobre cada uno de los lenguajes del repositorio.
+Además, se muestran todos los usuarios que han contribuido, y al hacer clic sobre cualquiera de ellos, muestra los commits realizados sobre cada uno de los lenguajes del repositorio.
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{img/resultado3userrepo.png}
@@ -730,7 +725,7 @@ El funcionamiento es de la siguiente manera:
       \caption{Respuesta a la petición GET al endpoint /usersearch}
       \label{figura:usersearch}
     \end{figure}
-  \item Cuando llega esa petición POST, el servidor procede a buscar los repositorios públicos del usuario que ha llegado en el body de la petición. Esto se hace mediante la función obtain\_user\_repos del fichero requests\_to\_github\_api.py, cuya salida es un diccionario con el nombre de todos los repositorios que posee ese usuario. Este diccionario es lo que se forma la respuesta final del endpoint.
+  \item Cuando llega esa petición POST, el servidor procede a buscar los repositorios públicos del usuario que ha llegado en el body de la petición. Esto se hace mediante la función obtain\_user\_repos del fichero requests\_to\_github\_api.py, cuya salida es un diccionario con el nombre de todos los repositorios que posee ese usuario. Este diccionario es lo que da forma a la respuesta final del endpoint.
 \end{itemize}
 
 Al finalizar, se representa de la siguiente manera en la aplicación web:
@@ -752,7 +747,14 @@ Lo que hace que facilite al usuario la experiencia de analizar varios repositori
 \section{Interacción con la base de datos}
 \label{sec:Interacción con la base de datos}
 
-Como se ha dicho anteriormente, es la base de datos está basada en SQLite3. Se han definido dos tablas en la base de datos:
+Como se ha dicho anteriormente, es la base de datos está basada en SQLite3. Se han definido tres tablas en la base de datos:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/erdiagram.png}
+  \caption{Diagrama entidad-relación de la base de datos}
+  \label{figura:Diagrama entidad-relación de la base de datos}
+\end{figure}
 
 \subsection{Tabla Repository}
 \label{subsec:Tabla Repository}
@@ -813,7 +815,7 @@ En este capítulo se explica un ejemplo del que podría ser el uso común de la 
 \section{Ejemplo de uso de la aplicación con el análisis de un repositorio}
 \label{sec:Ejemplo de uso de la aplicación con el análisis de un repositorio}
 
-Como hemos comentado en el punto anterior, nos ayudaremos de nuestra aplicación web para hacer una petición GET al endpoint /usersearch dando click en "Búsqueda por usuario".
+Como hemos comentado en el punto anterior, nos ayudaremos de nuestra aplicación web para hacer una petición GET al endpoint /usersearch dando click en ``Búsqueda por usuario".
 
 \begin{figure}[H]
   \centering
@@ -919,6 +921,8 @@ Ahora que se ha hecho la recolección y almacenaje de los datos, queda la repres
   \label{figura:analisishystrix3}
 \end{figure}
 
+En las figuras 5.10, 5.11 y 5.12 se muestra el resultado del análisis. En este repositorio hay 472 ficheros en total, y hay 11 lenguajes. El lenguaje mayoritario es Java, con un 88,4\% de ocupación. Los lenguajes minoritarios son YAML, Markdown, VIM Help File (TXT), Gradle, XML, Java Properties, CSS, Batchfile, Clojure y Java Server Page, que representan menos del 5\%. Se muestra la información acerca de las contribuciones al repositorio en estos lenguajes minoritarios de parte de  cada uno de los usuarios, y la lista de todos los usuarios con su participación en el repositorio.
+
 \section{Análisis de más repositorios}
 \label{sec:Análisis de más repositorios}
 
@@ -931,54 +935,78 @@ Para ver el análisis en más repositorios del usuario netflix, he escogido 9 re
   \label{figura:analisiszuul}
 \end{figure}
 
+En el repositorio Zuul, el lenguaje mayoritario es Java con un 91,5\%, mientras que YAML, Markdown, Gradle, XML, Java Properties, Batchfile y Groovy son lenguajes minoritarios. Se muestran las contribuciones de cada usuario a cada uno de los lenguajes minoritarios y la lista de todos los usuarios que han participado en el proyecto.
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{img/flamescope.png}
   \caption{Representación gráfica del análisis del repositorio Flamescope}
   \label{figura:analisisflamescope}
 \end{figure}
+
+En el repositorio Flamescope los lenguajes mayoritarios se reparten más, y en este caso no es Java el lenguaje principal, sino Python, con un 49,3\% de ocupación. Le sigue JavaScript con un 36,0\%, que también es mayoritario. El resto, YAML, Markdown, JSON, VIM Help File (TXT), Less y EJS son los lenguajes minoritarios.
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{img/chaosmonkey.png}
   \caption{Representación gráfica del análisis del repositorio chaosmonkey}
   \label{figura:analisischaosmonkey}
 \end{figure}
+
+En esta ocasión, en el repositorio chaosmonkey, los dos lenguajes mayoritarios son Go con un 79\% y Markdown con un 15,8\%. YAML, XML, TSQL y Shell son minoritarios.
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{img/eureka.png}
   \caption{Representación gráfica del análisis del repositorio Eureka}
   \label{figura:analisiseureka}
 \end{figure}
+
+Del repositorio eureka, Java es el lenguaje principal con un 89,3\% de uso total, mientras que el resto de lenguajes que se han usado en el repositorio son todos minoritarios. Es un repositorio bastante grande, con 469 ficheros totales y un gran número de commits en algunos lenguajes minoritarios como Gradle o Java Properties.
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{img/fenzo.png}
   \caption{Representación gráfica del análisis del repositorio Fenzo}
   \label{figura:analisisfenzo}
 \end{figure}
+
+En el repositorio Fenzo, los lenguajes minoritarios son Markdown, VIM Help File (TXT), Gradle, JSON, Java Properties, Groovy y Batchfile. En este caso, aunque haya 159 archivos, se han realizado pocos commits sobre los lenguajes minoritarios, a excepción de Gradle. Java es el único lenguaje mayoritario, con un 89,5\%.
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{img/edda.png}
   \caption{Representación gráfica del análisis del repositorio Edda}
   \label{figura:analisisedda}
 \end{figure}
+
+En este repositorio Scala es el lenguaje principal con un 69,3\% de uso, seguido de Markdown con un 12\%. No es un repositorio muy grande, cuenta con 84 archivos y los lenguajes minoritarios, a excepción de JSON, cuentan con pocas contribuciones.
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{img/lipstick.png}
   \caption{Representación gráfica del análisis del repositorio Lipstick}
   \label{figura:analisislipstick}
 \end{figure}
+
+El repositorio Lipstick tiene el uso de los lenguajes bastante repartidos y no hay un lenguaje que destaque en gran cantidad. Al estar bastante repartidos hay varios lenguajes minoritarios como Markdown o Gradle, que están siendo bastante recurrentes en los repositorios de este usuario.
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{img/mantis.png}
   \caption{Representación gráfica del análisis del repositorio Mantis}
   \label{figura:analisismantis}
 \end{figure}
+
+Este repositorio, Mantis, vuelve a tener un lenguaje mayoritario principal, Java, con un 87,9\% de ocupación entre todos los ficheros. El resto, son todos lenguajes minoritarios con bastante participación.
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{img/spectator.png}
   \caption{Representación gráfica del análisis del repositorio spectator}
   \label{figura:analisisspectator}
 \end{figure}
+
+Spectator vuelve a ser un repositorio con Java como lenguaje principal, mientras que el resto son todos minoritarios. Destaca el número de contribuciones realizadas sobre ficheros XML con 1279 contribuciones entre todos los usuarios.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -991,6 +1019,7 @@ Para ver el análisis en más repositorios del usuario netflix, he escogido 9 re
 
 Se ha realizado el análisis de 200 repositorios, con lo podemos obtener unos resultados representativos con bastantes lenguajes, usuarios y contribuyentes distintos.
 
+En las figuras 6.1 y 6.2 se muestra el estado de la tabla Repository tras haber hecho el análisis de estos 200 repositorios. Aparecen las distintas filas y columnas de la tabla. Cada fila representa a uno de los repositorios, y las columnas contienen los distintos datos que se almacenan de cada uno de ellos.
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{img/tablarepo1.png}
@@ -1005,7 +1034,7 @@ Se ha realizado el análisis de 200 repositorios, con lo podemos obtener unos re
   \label{figura:repoafter2}
 \end{figure}
 
-En total, se han registrado en la base de datos 92.816 usuarios que hayan contribuido a alguno o varios de entre los 200 repositorios que se han analizado.
+En total, se han registrado en la base de datos 92.816 usuarios que hayan contribuido a alguno o varios de entre los 200 repositorios que se han analizado. Se muestra en las figuras 6.3 y 6.4, con el estado de la tabla User\_expertise. Cada fila presenta un usuario y las columnas los datos que se almacenan de cada uno de ellos.
 
 \begin{figure}[H]
   \centering
@@ -1021,7 +1050,7 @@ En total, se han registrado en la base de datos 92.816 usuarios que hayan contri
   \label{figura:userexpafter2}
 \end{figure}
 
-Y por úlitmo, en la tabla languages se han almacenado 262 lenguajes distintos.
+En la tabla Languages se han almacenado 262 lenguajes distintos. En las figuras 6.5 y 6.6 se muestra el estado de la tabla Languages tras analizar los 200 repositorios. Cada fila representa un lenguaje y las columnas, los datos que se almacenan de cada lenguaje.
 
 \begin{figure}[H]
   \centering
@@ -1043,11 +1072,35 @@ Con estos datos, ahora podemos comprobar como es el uso de los lenguajes en los 
 \begin{itemize}
   \item \textbf{¿Cuáles son los 10 lenguajes sobre los que más usuarios han realizado commits en los distintos repositorios analizados?}
         \begin{itemize}
-          \item Viendo la tabla Languages, y ordenando según la columna lan\_num\_users: Markdown: 46187 usuarios, Python: 22281 usuarios, XML: 14888 usuarios, JSON:13000 usuarios, JavaScript: 11092 usuarios, YAML: 10325 usuarios, Vim Help File (TXT): 5669 usuarios, C++: 5587 usuarios, Shell: 5377 usuarios, Go: 3750 usuarios.
+          \item Viendo la tabla Languages, y ordenando según la columna lan\_num\_users: 
+          \begin{itemize}
+            \item Markdown: 46187 usuarios
+            \item Python: 22281 usuarios
+            \item XML: 14888 usuarios
+            \item JSON:13000 usuarios
+            \item JavaScript: 11092 usuarios
+            \item YAML: 10325 usuarios
+            \item Vim Help File (TXT): 5669 usuarios
+            \item C++: 5587 usuarios
+            \item Shell: 5377 usuarios
+            \item Go: 3750 usuarios.
+          \end{itemize}
         \end{itemize}
   \item \textbf{¿Cuáles son los 10 lenguajes sobre los que se han realizado más commits en total?}
         \begin{itemize}
-          \item Viendo la tabla Languages, y ordenando según la columna lan\_num\_commits: XML: 795957, JavaScript: 703486, Python: 412025, YAML: 388705, JSON: 339749, Markdown: 330496, Go: 163826, HTML: 141931, C++: 126958, Objective-C: 97321.
+          \item Viendo la tabla Languages, y ordenando según la columna lan\_num\_commits:
+          \begin{itemize}
+            \item XML: 795957
+            \item JavaScript: 703486
+            \item Python: 412025
+            \item YAML: 388705
+            \item JSON: 339749
+            \item Markdown: 330496
+            \item Go: 163826
+            \item HTML: 141931
+            \item C++: 126958
+            \item Objective-C: 97321.
+          \end{itemize}
         \end{itemize}
   \item \textbf{¿Cuáles son los 10 lenguajes que en más repositorios han sido minoritarios?}
         \begin{itemize}
@@ -1083,11 +1136,23 @@ Con estos datos, ahora podemos comprobar como es el uso de los lenguajes en los 
         GROUP BY language
         ORDER BY frequency DESC;
       \end{verbatim}
-                Obtenemos que los 10 lenguajes que más se han repetido como minoritarios han sido: YAML: 130 veces, Vim Help File (TXT): 115 veces, Shell: 96 veces, CSS: 92 veces, SVG: 88 veces, JSON: 85 veces, HTML: 85 veces, Markdown: 70 veces, Javascript: 63 veces, TOML: 58 veces.
+                Obtenemos que los 10 lenguajes que más se han repetido como minoritarios han sido: 
+                \begin{itemize}
+                  \item YAML: 130 veces
+                  \item Vim Help File (TXT): 115 veces
+                  \item Shell: 96 veces
+                  \item CSS: 92 veces
+                  \item SVG: 88 veces
+                  \item JSON: 85 veces
+                  \item HTML: 85 veces
+                  \item Markdown: 70 veces
+                  \item Javascript: 63 veces
+                  \item TOML: 58 veces.
+                \end{itemize}
         \end{itemize}
   \item \textbf{¿Si nos fijamos en los lenguajes minoritarios que más se repiten en los repositorios, cuál es la tendencia de uso por parte de los contribuyentes?}
         \begin{itemize}
-          \item Ayudandonos de la tabla Languages, vamos a ver si estos lenguajes se han usado por muchos usuarios, y la cantidad de commits que estos han realizado.
+          \item Ayudándonos de la tabla Languages, vamos a ver si estos lenguajes se han usado por muchos usuarios, y la cantidad de commits que estos han realizado.
                 \begin{itemize}
                   \item YAML: Entre 10325 usuarios se han realizado 388705 commits.
                   \item VIM: Entre 5669 usuarios se han realizado 37867 commits.
@@ -1103,12 +1168,138 @@ Con estos datos, ahora podemos comprobar como es el uso de los lenguajes en los 
         \end{itemize}
   \item \textbf{¿Cómo es el uso de los lengajes minoritarios dentro de los repositorios? ¿Se centralizan en usuarios concretos? ¿Qué tipo de lenguajes suelen ser?}
         \begin{itemize}
-          \item En la mayoría de los repositorios que se han analizado, la tendencia que se sigue es que, si bien no se suelen centralizar en uno o en pocos usuarios, si que suele ocurrir que uno o dos usuarios destacan más en el uso de alguno de los lenguajes. Por ejemplo, con el repositorio prettier/prettier, más de 20 personas han realizado commits sobre ficheros de lenguaje YAML, pero la mayoría de ellos han realizado menos de 3 commits, mientras que la persona con más commits ha realizado 1081 commits, y el segundo, 351 commits. También tiene que ver con el número de commits que se realiza sobre cada uno de los lenguajes, ya que la tendencia que he comentado se suele dar sobre todo para aquellos lenguajes sobre los que se han realizado muchos commits, mientras que para los lenguajes con menos contribuciones, están más repartidos y no hay ningún usuario que destaque demasiado por encima del resto.
-
-                Los lenguajes que suelen ser minoritarios en la mayoría de repositorios se utilizan para realizar configuraciones o despliegues de aplicaciones y que suelen ser flexibles de manera que la mayoría de lenguajes de programación pueden usar. Por ello son tan importantes a pesar de que no sean los lenguajes con un mayor uso dentro de los repositorios, ya que suelen ser clave para el funcionamiento de una aplicación, un programa, etc.
+          \item En la mayoría de los repositorios que se han analizado, la tendencia que se sigue es que, si bien no se suelen centralizar del todo en uno o un grupo pequeño de usuarios, si que suele ocurrir que uno o varios de ellos destacan más en el uso de alguno de los lenguajes. Por ejemplo, con el repositorio prettier/prettier que se ha analizado, más de 20 personas han realizado commits sobre ficheros de lenguaje YAML, pero la mayoría de ellos han realizado menos de 3 commits, mientras que la persona con más commits ha realizado 1081 commits, y el segundo, 351 commits. También tiene que ver con el número de commits que se realiza sobre cada uno de los lenguajes, ya que la tendencia que he comentado se suele dar sobre todo para aquellos lenguajes sobre los que se han realizado muchos commits, mientras que para los lenguajes con menos contribuciones, están más repartidos y no hay ningún usuario que destaque demasiado por encima del resto.
+          
+          Los lenguajes que suelen ser minoritarios en la mayoría de repositorios se utilizan para realizar configuraciones o despliegues de aplicaciones y que suelen ser flexibles de manera que la mayoría de lenguajes de programación pueden usar. Por ello son tan importantes a pesar de que no sean los lenguajes con un mayor uso dentro de los repositorios, ya que suelen ser clave para el funcionamiento de una aplicación, un programa, etc.
         \end{itemize}
-    \end{itemize}
+  \item \textbf{¿Cómo es el uso general de los lenguajes minoritarios en los repositorios públicos?}
+        \begin{itemize}
+          \item Para ver el uso general de los lenguajes minoritarios vamos a calcular el coeficiente de Gini de los lenguajes minoritarios más usados en los repositorios que hemos analizado.
+          El coeficiente de Gini~\cite{gini:_gini} es una medida de desigualdad que normalmente se suele usar para calcular la desigualdad de ingresos o de población. Sin embargo, se puede usar para medir cualquier distribución desigual. El coeficiente de Gini puede tener un valor entre 0 y 1, siendo 0 la perfecta igualdad, mientras que el 1 es la desigualdad total. Se calcula con la siguiente fórmula matemática:
 
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.6\textwidth]{img/giniformula.png}
+            \caption{Fórmula de Brown usada para el cálculo del coeficiente de Gini}
+            \label{figura:giniformula}
+          \end{figure}
+          
+          donde:
+            \begin{itemize}
+              \item G es el Coeficiente de Gini
+              \item X suele ser la proporción de población
+              \item Y suele ser la proporción de ingresos.
+            \end{itemize}
+          Y se suele representar de la siguiente manera, con la línea de máxima igualdad, y la curva de Lorenz:
+            
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.6\textwidth]{img/graficagini.png}
+            \caption{Gráfica Coeficiente de Gini}
+            \label{figura:ginigrafica}
+          \end{figure}
+
+          En nuestro caso, al analizar la participación en los lenguajes teniendo en cuenta el número de contribuyentes y el número de commits, cambiaremos la proporción de población e ingresos por nuestros datos. Por tanto, si el coeficiente de Gini que obtenemos del uso de un lenguaje es cercano o igual a 0, significa que el uso es muy parecido entre los contribuyentes, mientras que si se acerca al 1 quiere decir que hay usuarios que contribuyen en mucha mayor cantidad que otros.W
+
+          Con ello, los datos que hemos obtenido en los 10 lenguajes minoritarios que más se repiten son:
+
+          \textbf{YAML: Coeficiente de Gini 0,739}
+
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth]{img/curva_lorenz_total_YAML.png}
+            \caption{Coeficiente de Gini YAML}
+            \label{figura:ginigraficaYAML}
+          \end{figure}
+
+          \textbf{VIM Help File: Coeficiente de Gini 0,750}
+
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth]{img/curva_lorenz_total_Vim Help File.png}
+            \caption{Coeficiente de Gini VIM Help File}
+            \label{figura:ginigraficaVIM}
+          \end{figure}
+
+          \textbf{Shell: Coeficiente de Gini 0,699}
+
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth]{img/curva_lorenz_total_Shell.png}
+            \caption{Coeficiente de Gini Shell}
+            \label{figura:ginigraficaShell}
+          \end{figure}
+
+          \textbf{CSS: Coeficiente de Gini 0,814}
+
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth]{img/curva_lorenz_total_CSS.png}
+            \caption{Coeficiente de Gini CSS}
+            \label{figura:ginigraficaCSS}
+          \end{figure}
+
+          \textbf{SVG: Coeficiente de Gini 0,814}
+
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth]{img/curva_lorenz_total_SVG.png}
+            \caption{Coeficiente de Gini SVG}
+            \label{figura:ginigraficaSVG}
+          \end{figure}
+
+          \textbf{JSON: Coeficiente de Gini 0,879}
+
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth]{img/curva_lorenz_total_JSON.png}
+            \caption{Coeficiente de Gini JSON}
+            \label{figura:ginigraficaJSON}
+          \end{figure}
+
+          \textbf{HTML: Coeficiente de Gini 0,960}
+
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth]{img/curva_lorenz_total_HTML.png}
+            \caption{Coeficiente de Gini HTML}
+            \label{figura:ginigraficaHTML}
+          \end{figure}
+
+          \textbf{Markdown: Coeficiente de Gini 0,828}
+
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth]{img/curva_lorenz_total_Markdown.png}
+            \caption{Coeficiente de Gini Markdown}
+            \label{figura:ginigraficaMarkdown}
+          \end{figure}
+
+          \textbf{JavaScript: Coeficiente de Gini 0,896}
+          
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth]{img/curva_lorenz_total_JavaScript.png}
+            \caption{Coeficiente de Gini JavaScript}
+            \label{figura:ginigraficaJavaScript}
+          \end{figure}
+
+          \textbf{TOML: Coeficiente de Gini 0,674}
+
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\textwidth]{img/curva_lorenz_total_TOML.png}
+            \caption{Coeficiente de Gini TOML}
+            \label{figura:ginigraficaTOML}
+          \end{figure}
+
+
+
+
+          Con esto se comprueba que la mayoría de lenguajes minoritarios de los repositorios que hemos analizado tienen un uso bastante desigual ya que todos se acercan bastante al 1. Esto quiere decir que en estos lenguajes suelen aportar bastante más unos pocos usuarios que el resto que contribuyen a estos. 
+
+    \end{itemize}
+  \end{itemize}
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         % CONCLUSIONES %
@@ -1141,7 +1332,7 @@ Para la realización de este trabajo de fin de grado he aplicado conocimientos a
 \begin{enumerate}
   \item \textbf{Informática 1}: Con esta asignatura comencé a conocer los fundamentos de la programación. Si bien el lenguaje que practiqué fue Picky, me ayudó a saber los conceptos más básicos.
   \item \textbf{Informática 2}: En esta asignatura, ya más centrada en programación más avanzada, pude ampliar mi conocimiento del lenguaje Python usado en este proyecto.
-  \item \textbf{Protocolos para la Transmisión}: Fue la primera asignatura en la que comencé a conocer Python y a aplicarlo. Probablemente, sea la que más me ha ayudado con este proyecto, ya que también hice una aplicación cliente-servidor, por lo que ya algo de experiencia.
+  \item \textbf{Protocolos para la Transmisión de Audio y Vídeo}: Fue la primera asignatura en la que comencé a conocer Python y a aplicarlo. Probablemente, sea la que más me ha ayudado con este proyecto, ya que también hice una aplicación cliente-servidor, por lo que ya algo de experiencia.
   \item \textbf{Construcción de Servicios y Aplicaciones Audiovisuales en Internet}: En esta asignatura comencé a tratar como funciona el front-end de una aplicación web, practicando con HTML, CSS y JavaScript, con lo que se ha construido el cliente de mi web.
   \item \textbf{Laboratorio de Tecnologías Audiovisuales en la web}: En esta asignatura conocí como funciona el back-end de una plataforma web, con lo que a la hora de hacer el servidor, pude aplicar algunos de los conceptos que aprendí.
 \end{enumerate}
@@ -1183,9 +1374,53 @@ Tras finalizar el proyecto y hacer un análisis general de lo que se puede mejor
 \chapter{Manual de usuario}
 \label{app:manual}
 
-Esto es un apéndice.
-Si has creado una aplicación, siempre viene bien tener un manual de usuario.
-Pues ponlo aquí.
+Al entrar en la aplicación se muestra esta pantalla:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{img/paginaprincipal.png}
+  \caption{Página inicial de la aplicación}
+  \label{figura:appmainpage2}
+\end{figure}
+
+  Al clicar en Búsqueda de un repositorio concreto se muestra esta pantalla:
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/userrepoget.png}
+    \caption{Respuesta con el formulario a la petición con método GET}
+    \label{figura:userrepoget2}
+  \end{figure}
+
+  Se debe introducir el nombre de usuario de GitHub y el nombre del repositorio a analizar y al enviarlo se muestra la siguiente pantalla:
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/httpie.png}
+    \caption{Respuesta con el análisis del repositorio}
+    \label{figura:httpie}
+  \end{figure}
+
+  Al hacer clic sobre los lenguajes o los usuarios aparece la información detallada acerca de ellos.
+
+  Si en la pantalla principal se pulsa en "Búsqueda por usuario" se muestra la siguiente pantalla:
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/usersearchget.png}
+    \caption{Respuesta a la petición GET al endpoint /usersearch}
+    \label{figura:usersearch2}
+  \end{figure}
+
+  Se debe introducir el nombre de usuario de GitHub, y se muestra una lista de los repositorios de ese usuario:
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/httpiesearch.png}
+    \caption{Respuesta con los repositorios del usuario}
+    \label{figura:httpiesearch}
+  \end{figure}
+
+  Al clicar en cualquier repositorio de la lista se pasa a su análisis.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
